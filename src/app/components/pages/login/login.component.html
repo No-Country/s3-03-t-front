@@ -1,0 +1,13 @@
+<form [formGroup]="form" (submit)="send()">
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" formControlName="email" id="email">
+    </div>
+    <div>
+        <label for="password">Contraseña:</label>
+        <input type="password" formControlName="password" id="password">
+    </div>
+    <div>
+        <button [disabled]="form.invalid">Iniciar sesión</button>
+    </div>
+</form>
