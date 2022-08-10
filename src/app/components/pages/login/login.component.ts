@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginInterface } from 'src/app/interfaces/login-interface';
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   
   form!: FormGroup;
+  user!: LoginInterface;
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
     this.form = this.formBuilder.group({
       email: ['', Validators.email],
       password: ['', Validators.required]
@@ -19,7 +23,8 @@ export class LoginComponent implements OnInit {
   };
 
   send(): any {
-    console.log(this.form.value);
+    this.user = this.form.value;
+    console.log(this.user);
   }
 
 }
