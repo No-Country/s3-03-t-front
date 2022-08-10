@@ -10,6 +10,7 @@ import { IndexComponent } from './components/pages/index/index.component';
 import { LoginComponent } from './components/pages/login/login.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderSessionComponent } from './components/other/header-session/header-session.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderSessionComponent
   ],
   imports: [
     BrowserModule,
