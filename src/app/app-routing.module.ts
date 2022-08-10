@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './services/online/auth.guard';
 
 //rutas públicas
 import { IndexComponent } from './components/pages/index/index.component';
@@ -27,24 +28,25 @@ const routes: Routes = [
   // { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent }
   // { path: 'forgot-password', component: ForgotPasswordComponent },
-  // { path: 'account', component: AccountComponent },
-  // { path: 'select-role', component: SelectRoleComponent },
+  // { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
+  // { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] },
   // { path: 'rental/:id', component: RentalComponent },
-  // { path: 'chat', component: ChatComponent },
+  // { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
   // { path: '**', component: NotFoundComponent },
 
   //rutas anfitrión
-  // { path: 'create-rental', component: CreateRentalComponent },
-  // { path: 'my-rentals', component: MyRentalsComponent },
+  // { path: 'create-rental', component: CreateRentalComponent, canActivate: [AuthGuard] },
+  // { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
 
   //rutas inquilino
-  // { path: 'search-rental', component: SearchRentalComponent },
-  // { path: 'search-roommate', component: SearchRoommateComponent }
+  // { path: 'search-rental', component: SearchRentalComponent, canActivate: [AuthGuard] },
+  // { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
 ];
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }
