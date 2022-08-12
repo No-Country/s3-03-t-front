@@ -12,6 +12,10 @@ export class LoginService {
 
   signin(form: FormGroup, user: LoginInterface) {
     user = form.value;
-    console.log(user);
+    if (form.invalid) {
+      console.log('error')
+    } else {
+      console.log(user);
+    }
   }
 }

@@ -1,0 +1,15 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap" rel="stylesheet">
+
+<form [formGroup]="form" (submit)="send()">
+    <div class="login-form-input-email">
+        <input type="text" formControlName="email" id="email" placeholder="Correo electrónico">
+    </div>
+    <div class="login-form-input-password">
+        <input type="password" formControlName="password" id="password" placeholder="Contraseña">
+    </div>
+    <div class="login-form-button">
+        <button>Iniciar sesión</button>
+    </div>
+</form>
