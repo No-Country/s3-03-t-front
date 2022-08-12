@@ -1,0 +1,41 @@
+// @import '../../../../styles.scss';
+
+main {
+    font-family: 'Exo', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10vh;
+    section {
+        .index-left {
+            margin-left: 5vw;
+
+            h1 {
+            margin: 22vh 10vw 18vh 0;
+            color: #00003A;
+            font-size: 40px;
+            }
+
+            a {
+                text-decoration: none;
+                padding: 1rem 3rem;
+                border-radius: 40px;
+                color: #00003A;
+                background-color: #FCA9C3;
+                font-size: 30px;
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        .vector {
+            width: 42vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .index-img {
+            width: 50vw;
+        }
+    }
+}
