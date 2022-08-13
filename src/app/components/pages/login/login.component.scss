@@ -1,3 +1,9 @@
+main {
+    min-height: 56vh;
+    max-height: 70vh;
+    position: relative;
+}
+
 .login-form {
     margin: 5vh 25vw 29vh;
 }
@@ -6,7 +12,7 @@
     width: 44vw;
     position: absolute;
     right: 10vw;
-    top: 23vh;
+    bottom: -50px;
     z-index: -1;
 }
 
