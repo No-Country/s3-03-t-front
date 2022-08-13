@@ -1,17 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/alertifyjs/build/css/alertify.min.css';
-@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+// @import '../node_modules/alertifyjs/build/css/alertify.min.css';
+// @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
 
 :root{
   --primaryHeader:hsl(240deg 100% 11%);
 
+  --background-primary-color: #EDEDED;
+
+  --text-primary-font: 'Exo', sans-serif;
+  --text-secondary-font: 'Lato', sans-serif;
+  --text-primary-color: #00003A;
+  --text-secondary-color: #C4C4C4;
+
   --buttonPrimaryAction:hsl(353deg 96% 90%);
   --buttonPrimaryActionActiveRoute:hsl(324deg 47% 39%);
+  --button-secondary-color: #FCA9C3;
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+  font-family: var(--text-primary-font);
   margin: 0;
+  a {
+    color: var(--text-primary-color);
+    text-decoration: none;
+  }
 }
 
 .header-session{
