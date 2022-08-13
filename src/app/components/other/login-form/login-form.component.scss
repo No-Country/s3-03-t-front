@@ -1,5 +1,5 @@
 * {
-    font-family: 'Exo', sans-serif;
+    font-family: var(--text-primary-font);
 }
 
 form {
@@ -28,8 +28,8 @@ form {
         padding: 0.5rem 2rem;
         border: none;
         border-radius: 40px;
-        color: #00003A;
-        background-color: #FCA9C3;
+        color: var(--text-primary-color);
+        background-color: var(--button-secondary-color);
         font-size: 1.5rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
