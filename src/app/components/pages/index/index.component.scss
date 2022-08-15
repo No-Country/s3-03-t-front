@@ -4,19 +4,16 @@ main {
     font-family: var(--text-primary-font);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 10vh;
+    margin-top: 15vh;
 
     section {
-
         .index-left {
-            margin-left: 5vw;
-
+            margin-left: 7vw;
             h1 {
-            margin: 22vh 10vw 18vh 0;
+            margin: 11vh 6vw 14vh 0;
             color: var(--text-primary-color);
             font-size: 40px;
             }
-
             a {
                 padding: 1rem 3rem;
                 border-radius: 40px;
@@ -26,17 +23,17 @@ main {
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
             }
         }
-        
-        .vector {
-            width: 42vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
 
         .index-img {
-            width: 50vw;
+            max-width: 50vw;
         }
     }
+}
+
+.vector {
+    width: 48vw;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
 }
