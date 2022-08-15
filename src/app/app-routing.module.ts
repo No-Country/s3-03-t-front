@@ -4,7 +4,7 @@ import { AuthGuard } from './services/online/auth.guard';
 
 //rutas públicas
 import { IndexComponent } from './components/pages/index/index.component';
-// import { RegisterComponent } from './components/pages/register/register.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 import { LoginComponent } from './components/pages/login/login.component';
 // import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
 // import { AccountComponent } from './components/pages/account/account.component';
@@ -25,7 +25,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 const routes: Routes = [
   //rutas públicas
   { path: '', component: IndexComponent },
-  // { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent }
   // { path: 'forgot-password', component: ForgotPasswordComponent },
   // { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
