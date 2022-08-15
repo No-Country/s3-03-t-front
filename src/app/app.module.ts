@@ -12,6 +12,8 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderSessionComponent } from './components/other/header-session/header-session.component';
 import { LoginFormComponent } from './components/other/login-form/login-form.component';
+import { RegisterComponent } from './components/pages/register/register.component';
+import { RegisterFormComponent } from './components/other/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LoginFormComponent } from './components/other/login-form/login-form.com
     IndexComponent,
     LoginComponent,
     HeaderSessionComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    RegisterComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

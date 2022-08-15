@@ -1,0 +1,29 @@
+main {
+    height: 70vh;
+    position: relative;
+}
+
+.register-form {
+    margin: 7vh 25vw;
+}
+
+.register-img {
+    height: 60vh;
+    position: absolute;
+    bottom: -50px;
+    right: 10vw;
+}
+
+.vector-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.vector-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
