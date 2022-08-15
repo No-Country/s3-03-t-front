@@ -13,9 +13,9 @@ export class LoginService {
   signin(form: FormGroup, user: LoginInterface) {
     user = form.value;
     if (form.invalid) {
-      console.log('error')
+      alert('Error')
     } else {
-      console.log(user);
+      alert(`Correo: ${user.email}, contraseña: ${user.password}`);
     }
   }
 }
