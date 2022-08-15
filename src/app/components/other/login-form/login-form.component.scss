@@ -24,6 +24,10 @@ form {
         border-width: 0.5pt;
     }
 
+    input.ng-dirty.ng-invalid {
+        border-color: #FF0000;
+    }
+
     button {
         padding: 0.5rem 2rem;
         border: none;
