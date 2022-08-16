@@ -8,7 +8,7 @@ import { RegisterComponent } from './components/pages/register/register.componen
 import { LoginComponent } from './components/pages/login/login.component';
 // import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
 // import { AccountComponent } from './components/pages/account/account.component';
-// import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
+import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
 // import { RentalComponent } from './components/pages/rental/rental.component';
 // import { ChatComponent } from './components/pages/chat/chat.component';
 // import { NotFoundComponent } from './components/pages/not-found/not-found.component';
@@ -26,10 +26,10 @@ const routes: Routes = [
   //rutas públicas
   { path: '', component: IndexComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
   // { path: 'forgot-password', component: ForgotPasswordComponent },
   // { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
-  // { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] },
+  { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] }
   // { path: 'rental/:id', component: RentalComponent },
   // { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
   // { path: '**', component: NotFoundComponent },
