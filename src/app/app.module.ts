@@ -15,6 +15,8 @@ import { LoginFormComponent } from './components/other/login-form/login-form.com
 import { RegisterComponent } from './components/pages/register/register.component';
 import { RegisterFormComponent } from './components/other/register-form/register-form.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { RegisterFormComponent } from './components/other/register-form/register
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
