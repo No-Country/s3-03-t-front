@@ -9,12 +9,18 @@ form {
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     z-index: 1;
 
-    .register-form-input{
+    .register-form-input-container{
       padding: 0 0 1rem;
     }
 
-    .register-form-input-name {
-        padding: 2rem 0 1rem;
+    .register-form-input-container-name {
+      padding: 2rem 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .input-name {
+        width: 40%;
+      }
     }
 
     input {
@@ -22,6 +28,11 @@ form {
         width: 80%;
         background-color: #FCFEF1;
         border-width: 0.5pt;
+        border-radius: 3px;
+    }
+
+    input.ng-dirty.ng-invalid {
+      border-color: #FF0000;
     }
 
     button {
@@ -36,10 +47,10 @@ form {
     }
 }
 
-.register-form-button{
+.register-form-button-container{
   padding-bottom: 1rem;
 }
 
-img{
-  z-index: -1;
-}
+// img{
+//   z-index: -1;
+// }

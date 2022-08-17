@@ -1,18 +1,21 @@
-<!-- <form [formGroup]="form" (submit)="send()"> -->
-<form action="">
-    <div class="register-form-input register-form-input-name">
-        <input type="text" formControlName="name" id="name" placeholder="Nombre y apellido">
+<form [formGroup]="form" (submit)="send()">
+    <div class="register-form-input-container register-form-input-container-name">
+        <input type="text" formControlName="firstName" id="first-name" placeholder="Nombre(s)" class="input-name">
+        <input type="text" formControlName="lastName" id="last-name" placeholder="Apellido(s)" class="input-name">
     </div>
-    <div class="register-form-input register-form-input-email">
+    <div class="register-form-input-container register-form-input-container-dni">
+        <input type="text" formControlName="dni" id="dni" placeholder="Documento N°">
+    </div>
+    <div class="register-form-input-container register-form-input-container-email">
         <input type="text" formControlName="email" id="email" placeholder="Correo electrónico">
     </div>
-    <div class="register-form-input register-form-input-password">
+    <div class="register-form-input-container register-form-input-container-password">
         <input type="password" formControlName="password" id="password" placeholder="Contraseña">
     </div>
-    <div class="register-form-input register-form-input-confirm-password">
-        <input type="password" formControlName="confirm-password" id="confirm-password" placeholder="Confirmar contraseña">
+    <div class="register-form-input-container register-form-input-container-confirm-password">
+        <input type="password" formControlName="confirmPassword" id="confirm-password" placeholder="Confirmar contraseña">
     </div>
-    <div class="register-form-button">
+    <div class="register-form-button-container">
         <button>Registrarse</button>
     </div>
 </form>
