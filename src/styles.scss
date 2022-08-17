@@ -29,5 +29,6 @@ body{
 }
 
 .activeRouteSession{
-  background-color: var(--buttonPrimaryActionActiveRoute);
+  background-color: var(--buttonPrimaryActionActiveRoute) !important;
+  color: white !important;
 }
