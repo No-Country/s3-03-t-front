@@ -11,12 +11,12 @@ form {
 
     .login-form-input-email {
         padding: 2rem 0 1rem;
-        
+
     }
     .login-form-input-password {
         padding: 0 0 1rem;
     }
-    
+
     input {
         padding: 0.5rem;
         width: 80%;
@@ -40,3 +40,6 @@ form {
     }
 }
 
+img{
+  z-index: -1;
+}
