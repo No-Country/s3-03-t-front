@@ -3,11 +3,11 @@
     <img src="https://picsum.photos/100/50" alt="logo">
   </article>
   <article class="header-session-buttons">
-    <button class="header-session-button-action" routerLink="login" routerLinkActive="activeRouteSession">
+    <div class="header-session-button-action" [routerLink]="['','login']" routerLinkActive="activeRouteSession">
       Iniciar sesión
-    </button>
-    <button class="header-session-button-action" routerLink="register" routerLinkActive="activeRouteSession">
+    </div>
+    <div class="header-session-button-action" [routerLink]="['','register']" routerLinkActive="activeRouteSession">
       Registrarse
-    </button>
+    </div>
   </article>
 </section>
