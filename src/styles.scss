@@ -28,36 +28,6 @@ body{
   }
 }
 
-.header-session{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: var(--primaryHeader);
-}
-
-.header-session-logo{
-  img{
-    width: 70px;
-    height: 30px;
-    object-fit: cover;
-  }
-}
-
-.header-session-buttons{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-session-button-action{
-  display: inline-block;
-  padding: 7px 20px;
-  border-radius: 20px;
-  background-color: var(--buttonPrimaryAction);
-  margin-left: 0.5rem;
+.activeRouteSession{
+  background-color: var(--buttonPrimaryActionActiveRoute);
 }
