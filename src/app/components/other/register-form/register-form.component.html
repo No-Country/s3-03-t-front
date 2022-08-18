@@ -1,4 +1,4 @@
-<form [formGroup]="form" (submit)="send()">
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
     <div class="register-form-input-container register-form-input-container-name">
         <input type="text" formControlName="firstName" id="first-name" placeholder="Nombre(s)" class="input-name">
         <input type="text" formControlName="lastName" id="last-name" placeholder="Apellido(s)" class="input-name">
@@ -16,6 +16,6 @@
         <input type="password" formControlName="confirmPassword" id="confirm-password" placeholder="Confirmar contraseña">
     </div>
     <div class="register-form-button-container">
-        <button>Registrarse</button>
+        <button [disabled]="!passMatch">Registrarse</button>
     </div>
 </form>

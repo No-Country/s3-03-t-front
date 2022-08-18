@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EmailValidator, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { LoginInterface } from 'src/app/interfaces/login-interface';
 
 // import { Observable, throwError } from "rxjs";
@@ -13,35 +12,28 @@ import { LoginInterface } from 'src/app/interfaces/login-interface';
 
 export class LoginService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    private http: HttpClient,
+    ) { }
 
-  data: any;
+  user!: LoginInterface;
 
-  signin(form: FormGroup, user: LoginInterface) {
-
-    user = form.value;
-    
-    if (form.invalid) {
-      alert('Error: campos incorrectos')
-    } else {
-        this.http.post(
+  signin(user: LoginInterface):Observable<any>{
+    return this.http.post(
           //pendiente crear variable global
           'https://yourroom.herokuapp.com/auth/login',
           {
             "email": user.email,
             "password": user.password
           }
-        ).subscribe((res) => {
-          this.data = res;
-          //pendiente crear service que haga esto por otro lado
-          localStorage.setItem('token', this.data.token);
-          localStorage.setItem('role', this.data.role);
-          localStorage.setItem('firstName', this.data.firstName);
-          localStorage.setItem('lastName', this.data.lastName);
-
-          //redirect
-          this.router.navigate(['/select-role']);
-        }, (err) => alert(err.message))
+        )
     }
+
+  saveUser(user: any){
+    this.user = user;
+    localStorage.setItem('token', user.token);
+    localStorage.setItem('role', user.role);
+    localStorage.setItem('firstName', user.firstName);
+    localStorage.setItem('lastName', user.lastName);
   }
 }

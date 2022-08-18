@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginInterface } from 'src/app/interfaces/login-interface';
 import { LoginService } from 'src/app/services/online/login.service';
 
@@ -10,21 +11,41 @@ import { LoginService } from 'src/app/services/online/login.service';
 })
 export class LoginFormComponent implements OnInit {
 
+  constructor(
+    private loginService: LoginService,
+    private formBuilder: FormBuilder,
+    private _router: Router
+    ) {
+      this.buildForm();
+    };
+
   form!: FormGroup;
-  user!: LoginInterface;
 
-  constructor(private loginService: LoginService, private formBuilder: FormBuilder) { };
-
-  ngOnInit(): void {
+  buildForm(): void {
     this.form = this.formBuilder.group({
       email: ['', Validators.email],
       password: ['', Validators.required]
     });
+  }
+
+  ngOnInit(): void {
   };
 
   //post request a la api del backend
   send(): void {
-    this.loginService.signin(this.form, this.user);
+    if (this.form.invalid) {
+      alert('Error: campos incorrectos')
+    }else{
+      this.loginService.signin(this.form.value)
+      .subscribe((res) => {
+        this.loginService.user = res;
+        this.loginService.saveUser(res);
+        //redirect
+        this._router.navigate(['/select-role']);
+      }, (err) => {
+        alert(err.message)
+      });
+    }
   };
 
 }
