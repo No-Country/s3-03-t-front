@@ -1,4 +1,4 @@
-<form [formGroup]="form" (submit)="send()">
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
     <div class="login-form-input-email">
         <input type="text" formControlName="email" id="email" placeholder="Correo electrónico">
     </div>
@@ -6,6 +6,6 @@
         <input type="password" formControlName="password" id="password" placeholder="Contraseña">
     </div>
     <div class="login-form-button">
-        <button>Iniciar sesión</button>
+        <button [disabled]="form.invalid">Iniciar sesión</button>
     </div>
 </form>
