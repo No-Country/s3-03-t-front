@@ -25,10 +25,6 @@ export class RegisterFormComponent implements OnInit {
   }
 
   send(): void{
-    if(this.form.valid){
-      this.registerService.register(this.form.value);
-    }else{
-      alert("Complete todos los campos correctamente");
-    }
+    this.registerService.register(this.form);
   }
 }

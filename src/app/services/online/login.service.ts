@@ -20,7 +20,7 @@ export class LoginService {
   signin(form: FormGroup, user: LoginInterface) {
 
     user = form.value;
-    
+
     if (form.invalid) {
       alert('Error: campos incorrectos')
     } else {
