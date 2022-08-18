@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { RegisterInterface } from 'src/app/interfaces/register-interface';
 
 @Injectable({
@@ -9,16 +10,15 @@ import { RegisterInterface } from 'src/app/interfaces/register-interface';
 })
 export class RegisterService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router
+    ) { }
 
   data: any;
 
-  register(form: FormGroup) {
-
-    if (form.invalid) {
-      alert("Complete todos los campos correctamente")
-    } else {
-      this.http.post(
+  register(form: FormGroup):Observable<any>{
+    return this.http.post(
         //base url + '/auth/register'
         'https://yourroom.herokuapp.com/auth/register',
 
@@ -31,11 +31,12 @@ export class RegisterService {
           "password": form.value.password,
           "telephone": '+54 9'
         }
-      ).subscribe((res) => {
-        this.data = res;
-        localStorage.setItem('email', this.data.email);
-        this.router.navigate(['/login']);
-      }, (err) => alert(err.message));
-    }
+      )
   }
+
+  saveData(data: any): void{
+    this.data = data
+    localStorage.setItem('email', data.email);
+  }
+
 }
