@@ -18,8 +18,8 @@ import { SelectRoleComponent } from './components/pages/select-role/select-role.
 // import { MyRentals } from './components/pages/my-rentals/my-rentals.component';
 
 //rutas inquilino
-// import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
-// import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
+import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
+import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
 
 
 const routes: Routes = [
@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   // { path: 'forgot-password', component: ForgotPasswordComponent },
   // { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
-  { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] }
+  { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] },
   // { path: 'rental/:id', component: RentalComponent },
   // { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
   // { path: '**', component: NotFoundComponent },
@@ -39,8 +39,8 @@ const routes: Routes = [
   // { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
 
   //rutas inquilino
-  // { path: 'search-rental', component: SearchRentalComponent, canActivate: [AuthGuard] },
-  // { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
+  { path: 'search-rental', component: SearchRentalComponent, canActivate: [AuthGuard] },
+  { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
 ];
 
 
