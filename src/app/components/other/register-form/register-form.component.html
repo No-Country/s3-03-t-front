@@ -10,10 +10,10 @@
         <input type="text" formControlName="email" id="email" placeholder="Correo electrónico">
     </div>
     <div class="register-form-input-container register-form-input-container-password">
-        <input type="password" formControlName="password" id="password" placeholder="Contraseña">
+        <input type="password" formControlName="password" id="password" placeholder="Contraseña" minlength="8">
     </div>
     <div class="register-form-input-container register-form-input-container-confirm-password">
-        <input type="password" formControlName="confirmPassword" id="confirm-password" placeholder="Confirmar contraseña">
+        <input type="password" formControlName="confirmPassword" id="confirm-password" placeholder="Confirmar contraseña" minlength="8">
     </div>
     <div class="register-form-button-container">
         <button [disabled]="!passMatch">Registrarse</button>
