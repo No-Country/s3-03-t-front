@@ -18,6 +18,7 @@ import { RegisterFormComponent } from './components/other/register-form/register
 import { HttpClientModule } from '@angular/common/http';
 import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
 import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
+import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchRentalComponent } from './components/pages/search-rental/search-r
     RegisterComponent,
     RegisterFormComponent,
     SelectRoleComponent,
-    SearchRentalComponent
+    SearchRentalComponent,
+    SearchRoommateComponent
   ],
   imports: [
     BrowserModule,
