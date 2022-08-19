@@ -17,6 +17,7 @@ import { RegisterFormComponent } from './components/other/register-form/register
 
 import { HttpClientModule } from '@angular/common/http';
 import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
+import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SelectRoleComponent } from './components/pages/select-role/select-role.
     LoginFormComponent,
     RegisterComponent,
     RegisterFormComponent,
-    SelectRoleComponent
+    SelectRoleComponent,
+    SearchRentalComponent
   ],
   imports: [
     BrowserModule,
