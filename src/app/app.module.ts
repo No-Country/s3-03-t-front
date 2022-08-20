@@ -19,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
 import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
 import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
+import { SearchRentalFormComponent } from './components/other/search-rental-form/search-rental-form.component';
+import { AdvertiseEditProfileComponent } from './components/other/advertise-edit-profile/advertise-edit-profile.component';
+import { InfoCardComponent } from './components/other/info-card/info-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { SearchRoommateComponent } from './components/pages/search-roommate/sear
     RegisterFormComponent,
     SelectRoleComponent,
     SearchRentalComponent,
-    SearchRoommateComponent
+    SearchRoommateComponent,
+    SearchRentalFormComponent,
+    AdvertiseEditProfileComponent,
+    InfoCardComponent
   ],
   imports: [
     BrowserModule,
