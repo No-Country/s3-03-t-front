@@ -1,0 +1,28 @@
+.advertise-edit-profile-container {
+    font-family: var(--text-primary-font);
+    background-image: linear-gradient(to right, rgba(242, 246, 216, 1), rgba(242, 246, 216, 0));
+    height: 523px;
+    margin: 0 1vw;
+    border-radius: 20px;
+    position: relative;
+    .advertise-edit-profile-text {
+        padding: 1rem;
+        width: 45vw;
+    }
+    .advertise-edit-profile-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .advertise-edit-profile-button {
+        padding: 0.5rem 2rem;
+        border: none;
+        border-radius: 40px;
+        color: var(--text-primary-color);
+        background-color: var(--button-secondary-color);
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
