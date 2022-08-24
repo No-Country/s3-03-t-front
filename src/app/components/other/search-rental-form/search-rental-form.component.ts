@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SearchRentalService } from 'src/app/services/online/search-rental.service';
 
 @Component({
   selector: 'app-search-rental-form',
@@ -9,15 +10,27 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class SearchRentalFormComponent implements OnInit {
   
   constructor(
-    private formBuilder: FormBuilder
-  ) { }
+    private formBuilder: FormBuilder,
+    private searchRentalService: SearchRentalService
+  ) {
+    this.buildForm();
+  }
 
   form!: FormGroup;
   
   ngOnInit(): void {
   }
 
-  send():void {
+  buildForm() {
+    this.form = this.formBuilder.group({
+      ubicacion: ['', Validators.required]
+    })
+  }
 
+  send():void {
+    this.searchRentalService.getAllRentals()
+      .subscribe((res) => console.log(res),
+      (err) => console.log(err)
+      )
   }
 }
