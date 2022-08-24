@@ -39,7 +39,9 @@ const routes: Routes = [
   // { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
 
   //rutas inquilino
-  { path: 'search-rental', component: SearchRentalComponent, canActivate: [AuthGuard] },
+  { path: 'search-rental', component: SearchRentalComponent
+  // , canActivate: [AuthGuard] 
+},
   { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
 ];
 

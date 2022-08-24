@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search-rental-form',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-rental-form.component.scss']
 })
 export class SearchRentalFormComponent implements OnInit {
+  
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
-  constructor() { }
-
+  form!: FormGroup;
+  
   ngOnInit(): void {
   }
 
+  send():void {
+
+  }
 }
