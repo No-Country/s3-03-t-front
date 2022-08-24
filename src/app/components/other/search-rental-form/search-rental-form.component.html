@@ -1,1 +1,52 @@
-<p>search-rental-form works!</p>
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
+    <h1>Encuentra tu lugar y compañero ideal</h1>
+    <p>Descubre alojamientos y los mejores compañeros que se adapten a tus necesidades</p>
+    <div class="search-rental-form-container search-rental-form-container-ubicacion">
+        <input type="text" formControlName="ubicacion" id="ubicacion" placeholder="Ubicación" class="ubicacion">
+    </div>
+    <div class="search-rental-form-container search-rental-form-container-fecha-ingreso">
+        <input type="text" formControlName="fechaIngreso" id="fecha-ingreso" placeholder="Fecha ingreso">
+    </div>
+    <div class="search-rental-form-container search-rental-form-container-caracteristicas">
+        <select name="mascotas" id="mascotas">
+            <option value="" disabled selected>Mascotas</option>
+            <option value="Si">Mascotas sí</option>
+            <option value="No">Mascotas no</option>
+        </select>
+        <select name="banos" id="banos">
+            <option value="" disabled selected>Baños</option>
+            <option value="1">1 baño</option>
+            <option value="2">2 baños</option>
+            <option value="3">3 baños o más</option>
+        </select>
+    </div>
+    <div class="search-rental-form-container search-rental-form-container-precios">
+        <label for="">Rango de precios</label>
+
+        <input type="text" list="precio-minimo" placeholder="Mín."/>
+        <datalist id="precio-minimo">
+            <option>20000</option>
+            <option>40000</option>
+            <option>60000</option>
+        </datalist>
+
+        <input type="text" list="precio-maximo" placeholder="Máx." />
+        <datalist id="precio-maximo">
+            <option>60000</option>
+            <option>80000</option>
+            <option>100000</option>
+        </datalist>
+    </div>
+    <div class="search-rental-form-container search-rental-form-container-privacidad">
+        <span>
+            <input type="radio" name="privacidad" id="habitacion" value="habitacion">
+        <label for="habitacion">Habitación</label>
+        </span>
+        <span>
+        <input type="radio" name="privacidad" id="departamento" value="departamento">
+        <label for="departamento">Departamento</label></span>
+    </div>
+    <div class="search-rental-form-container search-rental-form-button-container">
+        <button>Buscar</button>
+    </div>
+</form>
