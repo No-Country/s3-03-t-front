@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-select-role',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectRoleComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  selectAnfitrion() {
+    this.router.navigate(['/my-rentals']);
+  }
+
+  selectInquilino() {
+    this.router.navigate(['/search-rental']);
   }
 
 }
