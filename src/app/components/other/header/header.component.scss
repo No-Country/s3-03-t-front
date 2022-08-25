@@ -1,0 +1,41 @@
+.header-session{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--primaryHeader);
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    .header-session-left {
+      display: flex;
+    }
+  }
+  
+  .header-session-logo{
+    img{
+      padding: 10px 20px 5px;
+      width: 77px;
+      object-fit: cover;
+    }
+  }
+  
+  .header-session-buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .header-session-button-action{
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 20px;
+    color: var(--text-third-color);
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }  

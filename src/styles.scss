@@ -11,6 +11,7 @@
   --text-secondary-font: 'Lato', sans-serif;
   --text-primary-color: #00003A;
   --text-secondary-color: #C4C4C4;
+  --text-third-color: #FCFCFC;
 
   --buttonPrimaryAction:hsl(353deg 96% 90%);
   --buttonPrimaryActionActiveRoute:hsl(324deg 47% 39%);
@@ -33,4 +34,8 @@ body{
 .activeRouteSession{
   background-color: var(--buttonPrimaryActionActiveRoute) !important;
   color: white !important;
+}
+
+.activeRoute {
+  color: var(--button-secondary-color) !important;
 }

@@ -3,7 +3,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 5rem;
   width: 100%;
   box-sizing: border-box;
   background-color: var(--primaryHeader);
@@ -15,8 +15,8 @@
 
 .header-session-logo{
   img{
-    width: 70px;
-    height: 30px;
+    padding: 10px 20px 5px;
+    width: 77px;
     object-fit: cover;
   }
 }
