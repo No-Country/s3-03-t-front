@@ -1,1 +1,25 @@
-<p>header works!</p>
+<section class="header-session">
+
+  <section class="header-session-left">
+    <article class="header-session-logo">
+      <img src="../../../../assets/header/Share.png" alt="logo" [routerLink]="['']">
+    </article>
+    <article class="header-session-buttons">
+        <div class="header-session-button-action" [routerLink]="['','search-rental']" routerLinkActive="activeRoute">
+          Buscar Alquiler 
+        </div>
+        <div class="header-session-button-action" [routerLink]="['','search-roommate']" routerLinkActive="activeRoute">
+          Buscar Compañero
+        </div>
+    </article>
+  </section>
+
+    <article class="header-session-buttons-profile">
+      <div class="header-session-button-action" [routerLink]="['','select-role']" routerLinkActive="activeRoute">
+        Soy inquilino
+      </div>
+      <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRouteSession">
+        PFP
+      </div>
+    </article>
+  </section>  
