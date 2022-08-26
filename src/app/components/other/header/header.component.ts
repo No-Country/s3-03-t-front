@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogoutService } from 'src/app/services/online/logout.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private logout: LogoutService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  disconnect() {
+    this.logout.disconnect();
   }
 
 }

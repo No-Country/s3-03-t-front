@@ -13,21 +13,23 @@ export class SearchRentalService {
     private router: Router
   ) { }
 
-  token:string = localStorage.getItem('token')!;
-
-  
-  headers:any = new HttpHeaders()
-        .set('Authorization', this.token!);
-
+  token!: string;
+  headers!: any;
 
   getAllRentals() {
+
+    //busca el token en el localstorage y setea los headers
+    this.token = localStorage.getItem('token')!;
+
+    this.headers = new HttpHeaders()
+        .set('Authorization', this.token!);
 
     //pendiente fixear esto de otra manera
     if (!this.token) {
       this.headers = new HttpHeaders()
-        .set('Authorization', 'this.token!');
-        console.log('header = string')
-    }
+        .set('Authorization', 'no valid token');
+        console.log('no token');
+    };
 
     return this.http.get(
       'https://yourroom.herokuapp.com/property',
