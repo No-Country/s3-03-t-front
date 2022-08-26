@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SearchRentalService } from 'src/app/services/online/search-rental.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class SearchRentalFormComponent implements OnInit {
   
   constructor(
     private formBuilder: FormBuilder,
-    private searchRentalService: SearchRentalService
+    private searchRentalService: SearchRentalService,
+    private router: Router
   ) {
     this.buildForm();
   }
@@ -30,7 +32,12 @@ export class SearchRentalFormComponent implements OnInit {
   send():void {
     this.searchRentalService.getAllRentals()
       .subscribe((res) => console.log(res),
-      (err) => console.log(err)
+      (err) => {
+        console.log(err);
+        if (err.status = 401) {
+          this.router.navigate(['/login']);
+        }
+      }
       )
   }
 }
