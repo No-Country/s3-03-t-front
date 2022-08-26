@@ -14,6 +14,10 @@
     .header-session-left {
       display: flex;
     }
+
+    .header-session-button-profile {
+      display: flex;
+    }
   }
   
   .header-session-logo{
@@ -38,4 +42,4 @@
     color: var(--text-third-color);
     margin-left: 0.5rem;
     cursor: pointer;
-  }  
+  }

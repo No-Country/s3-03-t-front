@@ -36,8 +36,8 @@ export class SearchRentalFormComponent implements OnInit {
         console.log(err);
         if (err.status = 401) {
           this.router.navigate(['/login']);
-        }
+        };
       }
-      )
+      );
   }
 }
