@@ -1,0 +1,21 @@
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
+
+        <input type="text" formControlName="ambientes" name="ambientes" id="ambientes" placeholder="Ambientes">
+        <!-- "ambient":2, -->
+        <textarea name="descripcion" formControlName="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
+        <!-- "description":"Departamento amoblado", -->
+        <input type="text" formControlName="direccion" name="direccion" id="direccion" placeholder="Dirección">
+        <!-- "direction":"Cabildo 3499", -->
+        <input type="text" formControlName="precio" name="precio" id="precio" placeholder="Precio">
+        <!-- "price":25000, -->
+
+        <!-- "pet":true,
+        "bath":true,
+        "furnished":false,
+        "smoker":false, -->
+        <input type="text" formControlName="metrosCuadrados" name="metros-cuadrados" id="metros-cuadrados" placeholder="m²">
+        <!-- "squareMeter":45, -->
+
+        <!-- "location":{"id":5} -->
+        <button>Crear</button>
+</form>

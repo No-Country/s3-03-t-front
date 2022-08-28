@@ -22,6 +22,8 @@ import { SearchRoommateComponent } from './components/pages/search-roommate/sear
 import { SearchRentalFormComponent } from './components/other/search-rental-form/search-rental-form.component';
 import { AdvertiseEditProfileComponent } from './components/other/advertise-edit-profile/advertise-edit-profile.component';
 import { InfoCardComponent } from './components/other/info-card/info-card.component';
+import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
+import { CreateRentalFormComponent } from './components/other/create-rental-form/create-rental-form.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { InfoCardComponent } from './components/other/info-card/info-card.compon
     SearchRoommateComponent,
     SearchRentalFormComponent,
     AdvertiseEditProfileComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    CreateRentalComponent,
+    CreateRentalFormComponent
   ],
   imports: [
     BrowserModule,

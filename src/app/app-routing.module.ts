@@ -14,7 +14,7 @@ import { SelectRoleComponent } from './components/pages/select-role/select-role.
 // import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 //rutas anfitrión
-// import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
+import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
 // import { MyRentals } from './components/pages/my-rentals/my-rentals.component';
 
 //rutas inquilino
@@ -35,7 +35,9 @@ const routes: Routes = [
   // { path: '**', component: NotFoundComponent },
 
   //rutas anfitrión
-  // { path: 'create-rental', component: CreateRentalComponent, canActivate: [AuthGuard] },
+  { path: 'create-rental', component: CreateRentalComponent
+  // , canActivate: [AuthGuard] 
+},
   // { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
 
   //rutas inquilino
