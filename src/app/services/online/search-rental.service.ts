@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeadersService } from '../other/http-headers.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class SearchRentalService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private httpHeaders: HttpHeadersService
   ) { }
 
   token!: string;
@@ -18,18 +19,18 @@ export class SearchRentalService {
 
   getAllRentals() {
 
-    //busca el token en el localstorage y setea los headers
-    this.token = localStorage.getItem('token')!;
+    this.headers = this.httpHeaders.getHeaders();
 
-    this.headers = new HttpHeaders()
-        .set('Authorization', this.token!);
+    // this.token = localStorage.getItem('token')!;
 
-    //pendiente fixear esto de otra manera
-    if (!this.token) {
-      this.headers = new HttpHeaders()
-        .set('Authorization', 'no valid token');
-        console.log('no token');
-    };
+    // this.headers = new HttpHeaders()
+    //     .set('Authorization', this.token!);
+
+    // if (!this.token) {
+    //   this.headers = new HttpHeaders()
+    //     .set('Authorization', 'no valid token');
+    //     console.log('no token');
+    // };
 
     return this.http.get(
       'https://yourroom.herokuapp.com/property',

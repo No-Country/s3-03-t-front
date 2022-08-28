@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RentalInterface } from 'src/app/interfaces/rental-interface';
+import { HttpHeadersService } from '../other/http-headers.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ import { RentalInterface } from 'src/app/interfaces/rental-interface';
 export class CreateRentalService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private httpHeaders: HttpHeadersService
   ) { }
 
   rental!: RentalInterface;
@@ -19,6 +21,8 @@ export class CreateRentalService {
   body: any;
 
   createRental(rental: RentalInterface) {
+
+    this.headers = this.httpHeaders.getHeaders();
 
     this.body = {
       "ambient":rental.ambientes,
@@ -33,18 +37,16 @@ export class CreateRentalService {
       "location":{"id":5}
     }
 
-    //busca el token en el localstorage y setea los headers
-    this.token = localStorage.getItem('token')!;
+    // this.token = localStorage.getItem('token')!;
 
-    this.headers = new HttpHeaders()
-      .set('Authorization', this.token!);
+    // this.headers = new HttpHeaders()
+    //   .set('Authorization', this.token!);
 
-    //pendiente fixear esto de otra manera
-    if (!this.token) {
-      this.headers = new HttpHeaders()
-        .set('Authorization', 'no valid token');
-      console.log('no token');
-    };
+    // if (!this.token) {
+    //   this.headers = new HttpHeaders()
+    //     .set('Authorization', 'no valid token');
+    //   console.log('no token');
+    // };
 
     let formData = new FormData();
 

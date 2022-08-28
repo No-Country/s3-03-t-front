@@ -35,6 +35,7 @@ export class SearchRentalFormComponent implements OnInit {
       (err) => {
         console.log(err);
         if (err.status = 401) {
+          console.log('err status 401 session timeout')
           this.router.navigate(['/login']);
         };
       }
