@@ -1,13 +1,13 @@
 <app-header></app-header>
 <section class="rental-catalog-container">
-    <app-rental-catalog-card *ngFor="let rental of rentals"
+    <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
     bath="{{rental.bath}}"
     description="{{rental.description}}"
     address="{{rental.direction}}"
     firstName="{{rental.firtName}}"
     lastName="{{rental.lastName}}"
     furnished="{{rental.furnished}}"
-    imgList="{{rental.imgList}}"
+    imgList="{{listaImg[j]}}"
     locationCity="{{rental.location.location}}"
     locationState="{{rental.location.province}}"
     locationCountry="{{rental.location.country}}"

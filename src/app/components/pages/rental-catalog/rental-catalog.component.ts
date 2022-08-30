@@ -10,13 +10,26 @@ import { SearchRentalService } from 'src/app/services/online/search-rental.servi
 export class RentalCatalogComponent implements OnInit {
 
   constructor(
-    private router: Router
-  ) {
-    
-  }
-  rentals = this.router.getCurrentNavigation()!.extras.state!.data;
+    private router: Router,
+    private searchRentalService: SearchRentalService
+  ) {}
+  
+  rentals: any = [];
+  listaImg: any = [];
 
   ngOnInit(): void {
+
+    this.searchRentalService.getAllRentals()
+      .subscribe((res) => {
+        this.rentals = res;
+
+        for (let i = 0; i < this.rentals.length - 4; i++) {
+          if (this.rentals[i].imgList.length !== 0) {
+            this.listaImg[i] = this.rentals[i].imgList[0].fileUrl;
+          }
+        }
+    })
+
   }
 
 }

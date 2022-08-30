@@ -14,12 +14,12 @@ export class RentalCatalogCardComponent implements OnInit {
   // @Input() address!: string;
   // @Input() firstName!: string;
   // @Input() lastName!: string;
-  // @Input() furnished!: string;
-  // @Input() imgList!: any;
+  @Input() furnished!: string;
+  @Input() imgList!: any;
   // @Input() locationCity!: any;
   // @Input() locationState!: any;
   // @Input() locationCountry!: any;
-  // @Input() pets!: string;
+  @Input() pets!: string;
   // @Input() price!: string;
   @Input() smoker!: string;
   // @Input() squareMeter!: string;
@@ -29,21 +29,31 @@ export class RentalCatalogCardComponent implements OnInit {
   @Input() address!: string;
   @Input() firstName: string = "Andrea";
   @Input() lastName: string = "Ortiz";
-  @Input() furnished: string = "Amoblado";
-  @Input() imgList: any = [{"fileUrl": "https://i.ibb.co/Lpq14Pg/Sin-t-tulo123.png"}];
+  // @Input() furnished: string = "Amoblado";
+  // @Input() imgList: any = [{"fileUrl": "https://i.ibb.co/Lpq14Pg/Sin-t-tulo123.png"}];
   @Input() locationCity: any = "Caballito";
   @Input() locationState: any = "CABA";
   @Input() locationCountry: any = "Argentina";
-  @Input() pets: string = "Acepta mascotas";
+  // @Input() pets: string = "Acepta mascotas";
   @Input() price!: string;
   // @Input() smoker: string = "No acepta fumadores";
   @Input() squareMeter: string = "12m2";
 
+  bathVal!: boolean;
+  furnishedVal!: boolean;
+  petsVal!: boolean;
   smokerVal!: boolean;
 
-  bathVal: boolean = (this.bath === 'true');
-
   ngOnInit(): void {
+    if (this.bath === 'true') {
+      this.bathVal = true;
+    }
+    if (this.furnished === 'true') {
+      this.furnishedVal = true;
+    }
+    if (this.pets === 'true') {
+      this.petsVal = true;
+    }
     if (this.smoker === 'true') {
       this.smokerVal = true;
     }
