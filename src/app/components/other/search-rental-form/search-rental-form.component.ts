@@ -33,11 +33,7 @@ export class SearchRentalFormComponent implements OnInit {
     this.searchRentalService.getAllRentals()
       .subscribe((res) => {
         console.log(res);
-        this.router.navigate(['/rental-catalog'], {
-          state: {
-            data: res
-          }
-        });
+        this.router.navigate(['/rental-catalog']);
       },
       (err) => {
         console.log(err);

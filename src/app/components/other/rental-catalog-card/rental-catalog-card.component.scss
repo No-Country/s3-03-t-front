@@ -2,8 +2,7 @@
     font-family: var(--text-secondary-font);
     background-color: var(--card-background-color);
     width: 25vw;
-    height: 500px;
-    margin: 5vh;
+    height: 520px;
     position: relative;
 
     .rental-catalog-card-title-container {
@@ -22,6 +21,12 @@
                 padding: 0 0 0.75rem 0.75rem;
             }
         }
+    }
+
+    .rental-catalog-card-photo-container {
+        display: flex;
+        max-height: 300px;
+        overflow: hidden;
     }
 
     .rental-catalog-card-info-container {
