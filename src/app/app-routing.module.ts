@@ -19,7 +19,9 @@ import { CreateRentalComponent } from './components/pages/create-rental/create-r
 
 //rutas inquilino
 import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
+import { RentalCatalogComponent } from './components/pages/rental-catalog/rental-catalog.component';
 import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
+import { RentalCatalogCardComponent } from './components/other/rental-catalog-card/rental-catalog-card.component';
 
 
 const routes: Routes = [
@@ -44,6 +46,12 @@ const routes: Routes = [
   { path: 'search-rental', component: SearchRentalComponent
   // , canActivate: [AuthGuard] 
 },
+  { path: 'rental-catalog', component: RentalCatalogComponent
+  // , canActivate: [AuthGuard]
+},
+
+  { path: 'card', component: RentalCatalogCardComponent },
+
   { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
 ];
 

@@ -1,0 +1,37 @@
+<article class="rental-catalog-card-container">
+    <div class="rental-catalog-card-title-container">
+        <span class="rental-catalog-card-title-image-container">pfp</span>
+        <span class="rental-catalog-card-title-text-container">
+            <h3 class="rental-catalog-card-title-name">{{firstName}} {{lastName}}</h3>
+            <p class="rental-catalog-card-title-location">{{locationCity}}, {{locationState}}, {{locationCountry}}</p>
+        </span>
+    </div>
+    <div *ngIf="imgList" class="rental-catalog-card-photo-container">
+        <img src="{{imgList[0].fileUrl}}" alt="img">
+    </div>
+    <div class="rental-catalog-card-info-container">
+        <div class="rental-catalog-card-info-features">
+            <span class="rental-catalog-card-info-feature">{{squareMeter}}m²</span>
+
+            <div *ngIf="bathVal; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>baño prop</ng-template>
+            <ng-template #elseBlock>baño comp</ng-template>
+
+            <!-- <div *ngIf="asd"; then thenBlock else elseBlock></div>
+            <ng-template class="rental-catalog-card-info-feature" #thenBlock>Baño propio</ng-template>
+            <ng-template class="rental-catalog-card-info-feature" #elseBlock>Baño compartido</ng-template> -->
+            <span class="rental-catalog-card-info-feature">{{furnished}}</span>
+            <span class="rental-catalog-card-info-feature">{{pets}}</span>
+            <div *ngIf="smokerVal; then smokerTrue else smokerFalse"></div>
+            <ng-template #smokerTrue>acepta fumar</ng-template>
+            <ng-template #smokerFalse>nonaceptafumar</ng-template>
+            <!-- <span class="rental-catalog-card-info-feature">{{smoker}}</span> -->
+        </div>
+        <div class="rental-catalog-card-info-description">
+            <p>{{description}}</p>
+        </div>
+    </div>
+    <div>
+        <button>heart</button>
+    </div>
+</article>

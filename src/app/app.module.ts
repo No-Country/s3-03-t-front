@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// import { MatIconModule } from '@angular/material/icon';
+
 import { HeaderComponent } from './components/other/header/header.component';
 import { FooterComponent } from './components/other/footer/footer.component';
 import { IndexComponent } from './components/pages/index/index.component';
@@ -24,6 +26,8 @@ import { AdvertiseEditProfileComponent } from './components/other/advertise-edit
 import { InfoCardComponent } from './components/other/info-card/info-card.component';
 import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
 import { CreateRentalFormComponent } from './components/other/create-rental-form/create-rental-form.component';
+import { RentalCatalogComponent } from './components/pages/rental-catalog/rental-catalog.component';
+import { RentalCatalogCardComponent } from './components/other/rental-catalog-card/rental-catalog-card.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,9 @@ import { CreateRentalFormComponent } from './components/other/create-rental-form
     AdvertiseEditProfileComponent,
     InfoCardComponent,
     CreateRentalComponent,
-    CreateRentalFormComponent
+    CreateRentalFormComponent,
+    RentalCatalogComponent,
+    RentalCatalogCardComponent
   ],
   imports: [
     BrowserModule,

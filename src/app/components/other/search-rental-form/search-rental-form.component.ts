@@ -31,7 +31,14 @@ export class SearchRentalFormComponent implements OnInit {
 
   send():void {
     this.searchRentalService.getAllRentals()
-      .subscribe((res) => console.log(res),
+      .subscribe((res) => {
+        console.log(res);
+        this.router.navigate(['/rental-catalog'], {
+          state: {
+            data: res
+          }
+        });
+      },
       (err) => {
         console.log(err);
         if (err.status = 401) {
