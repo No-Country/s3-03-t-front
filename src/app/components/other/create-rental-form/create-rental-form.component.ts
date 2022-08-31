@@ -20,14 +20,27 @@ export class CreateRentalFormComponent implements OnInit {
 
   id!: number;
 
+  selectedFile!: any;
+
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      ambientes: ['', Validators.required],
       descripcion: ['', Validators.required],
       direccion: ['', Validators.required],
       precio: ['', Validators.required],
-      metrosCuadrados: ['', Validators.required]
+      ambientes: ['', Validators.required],
+      metrosCuadrados: ['', Validators.required],
+      bano: ['', Validators.required],
+      mobiliario: ['', Validators.required],
+      mascotas: ['', Validators.required],
+      fumador: ['', Validators.required],
+      location: ['', Validators.required],
+      image: ['', Validators.required]
     })
+  }
+
+  processFile(imageInput: any){
+    this.selectedFile = imageInput.files[0];
+    console.log(this.selectedFile);
   }
 
   send(): void {
@@ -35,7 +48,7 @@ export class CreateRentalFormComponent implements OnInit {
     console.log('send pressed');
 
     try {
-      this.createRental.createRental(this.form.value)
+      this.createRental.createRental(this.form.value, this.selectedFile)
         .subscribe((res: any) => {
           console.log(res);
           this.id = res.id;

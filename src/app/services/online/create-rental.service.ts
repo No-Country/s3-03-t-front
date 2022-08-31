@@ -20,33 +20,24 @@ export class CreateRentalService {
 
   body: any;
 
-  createRental(rental: RentalInterface) {
+  createRental(rental: RentalInterface, img: any) {
 
     this.headers = this.httpHeaders.getHeaders();
 
     this.body = {
-      "ambient":rental.ambientes,
-      "description":rental.descripcion,
-      "direction":rental.direccion,
-      "price":rental.precio,
-      "pet":false,
-      "bath":true,
-      "furnished":false,
-      "smoker":false,
-      "squareMeter":rental.metrosCuadrados,
-      "location":{"id":5}
+      "ambient": rental.ambientes,
+      "description": rental.descripcion,
+      "direction": rental.direccion,
+      "price": rental.precio,
+      "pet": rental.mascotas,
+      "bath": rental.bano,
+      "furnished": rental.mobiliario,
+      "smoker": rental.fumador,
+      "squareMeter": rental.metrosCuadrados,
+      "location": {"id": rental.location}
     }
 
-    // this.token = localStorage.getItem('token')!;
-
-    // this.headers = new HttpHeaders()
-    //   .set('Authorization', this.token!);
-
-    // if (!this.token) {
-    //   this.headers = new HttpHeaders()
-    //     .set('Authorization', 'no valid token');
-    //   console.log('no token');
-    // };
+    console.log(this.body);
 
     let formData = new FormData();
 
@@ -55,7 +46,9 @@ export class CreateRentalService {
     ], {type : "application/json"});
     formData.set('property', propertyBlob);
 
-    let postimagesBlob = new Blob([], {type : "image/png"});
+    let postimagesBlob = new Blob([
+      img
+    ], {type : "image/png"});
     formData.set('postimages', postimagesBlob);
 
     return this.http.post(

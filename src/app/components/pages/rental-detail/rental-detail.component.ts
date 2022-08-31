@@ -12,13 +12,15 @@ export class RentalDetailComponent implements OnInit {
     private searchRentalService: SearchRentalService
   ) { }
 
-  id: number = 6;
+  id: number = 1;
+  rental!: any;
 
   ngOnInit(): void {
 
     this.searchRentalService.getRental(this.id)
       .subscribe((res) => {
-        console.log(res)
+        console.log(res);
+        this.rental = res;
       });
 
   }
