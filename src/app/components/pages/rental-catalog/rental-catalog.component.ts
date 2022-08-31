@@ -23,7 +23,7 @@ export class RentalCatalogComponent implements OnInit {
       .subscribe((res) => {
         this.rentals = res;
 
-        for (let i = 0; i < this.rentals.length - 4; i++) {
+        for (let i = 0; i < this.rentals.length; i++) {
           if (this.rentals[i].imgList.length !== 0) {
             this.listaImg[i] = this.rentals[i].imgList[0].fileUrl;
           }

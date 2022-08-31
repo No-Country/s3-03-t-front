@@ -1,6 +1,7 @@
+<app-header></app-header>
 <main>
-    <article>
-        <img src="" alt="">
+    <article *ngIf="rental">
+        <img src="{{rental.imgList[0].fileUrl}}" alt="rental-image">
     </article>
     <section>
         <article>

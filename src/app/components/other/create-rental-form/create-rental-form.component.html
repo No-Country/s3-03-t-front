@@ -1,21 +1,35 @@
 <form [formGroup]="form" (submit)="send()" autocomplete="off">
 
-        <input type="text" formControlName="ambientes" name="ambientes" id="ambientes" placeholder="Ambientes">
-        <!-- "ambient":2, -->
         <textarea name="descripcion" formControlName="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
-        <!-- "description":"Departamento amoblado", -->
         <input type="text" formControlName="direccion" name="direccion" id="direccion" placeholder="Dirección">
-        <!-- "direction":"Cabildo 3499", -->
         <input type="text" formControlName="precio" name="precio" id="precio" placeholder="Precio">
-        <!-- "price":25000, -->
-
-        <!-- "pet":true,
-        "bath":true,
-        "furnished":false,
-        "smoker":false, -->
+        <input type="text" formControlName="ambientes" name="ambientes" id="ambientes" placeholder="Ambientes">
         <input type="text" formControlName="metrosCuadrados" name="metros-cuadrados" id="metros-cuadrados" placeholder="m²">
-        <!-- "squareMeter":45, -->
+        <!-- baño -->
+        <input type="radio" formControlName="bano" name="bano" id="bano-propio" value="true">
+        <label for="bano-propio">Baño propio</label>
+        <input type="radio" formControlName="bano" name="bano" id="bano-compartido" value="false">
+        <label for="bano-compartido">Baño compartido</label>
+        <!-- amoblado -->
+        <input type="radio" formControlName="mobiliario" name="mobiliario" id="amoblado" value="true">
+        <label for="amoblado">Amoblado</label>
+        <input type="radio" formControlName="mobiliario" name="mobiliario" id="sin-amoblar" value="false">
+        <label for="sin-amoblar">Sin amoblar</label>
+        <!-- mascotas -->
+        <input type="radio" formControlName="mascotas" name="mascotas" id="acepta-mascotas" value="true">
+        <label for="acepta-mascotas">Se aceptan mascotas</label>
+        <input type="radio" formControlName="mascotas" name="mascotas" id="no-acepta-mascotas" value="false">
+        <label for="no-acepta-mascotas">No se aceptan mascotas</label>
+        <!-- fumador -->
+        <input type="radio" formControlName="fumador" name="fumador" id="acepta-fumadores" value="true">
+        <label for="acepta-fumadores">Se permite fumar</label>
+        <input type="radio" formControlName="fumador" name="fumador" id="no-acepta-fumadores" value="false">
+        <label for="no-acepta-fumadores">No se permite fumar</label>
 
-        <!-- "location":{"id":5} -->
+        <select name="location" id="location" formControlName="location">
+                <option value="5">flores</option>
+        </select>
+
+        <input type="file" name="image" id="image" formControlName="image" #imageInput (change)="processFile(imageInput)">
         <button>Crear</button>
 </form>
