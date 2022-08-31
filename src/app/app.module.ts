@@ -28,6 +28,7 @@ import { CreateRentalComponent } from './components/pages/create-rental/create-r
 import { CreateRentalFormComponent } from './components/other/create-rental-form/create-rental-form.component';
 import { RentalCatalogComponent } from './components/pages/rental-catalog/rental-catalog.component';
 import { RentalCatalogCardComponent } from './components/other/rental-catalog-card/rental-catalog-card.component';
+import { RentalDetailComponent } from './components/pages/rental-detail/rental-detail.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RentalCatalogCardComponent } from './components/other/rental-catalog-ca
     CreateRentalComponent,
     CreateRentalFormComponent,
     RentalCatalogComponent,
-    RentalCatalogCardComponent
+    RentalCatalogCardComponent,
+    RentalDetailComponent
   ],
   imports: [
     BrowserModule,
