@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rental-catalog-card',
@@ -7,7 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RentalCatalogCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   @Input() bath!: string;
   // @Input() description!: string;
@@ -57,6 +60,10 @@ export class RentalCatalogCardComponent implements OnInit {
     if (this.smoker === 'true') {
       this.smokerVal = true;
     }
+  }
+
+  openDetail() {
+    this.router.navigate(['/rental:id'])
   }
 
 }

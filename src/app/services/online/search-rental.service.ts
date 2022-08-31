@@ -19,7 +19,6 @@ export class SearchRentalService {
   headers!: any;
 
   getAllRentals() {
-
     this.headers = this.httpHeaders.getHeaders();
 
     return this.http.get(
@@ -28,6 +27,12 @@ export class SearchRentalService {
         headers: this.headers
       }
     );
+  }
+
+  getRental(id: number) {
+    return this.http.get(
+      `https://yourroom.herokuapp.com/property/${id}`
+    )
   }
 
 }
