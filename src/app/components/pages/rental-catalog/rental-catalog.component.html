@@ -1,6 +1,7 @@
 <app-header></app-header>
 <section class="rental-catalog-container">
     <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
+    id="{{rental.id}}"
     bath="{{rental.bath}}"
     description="{{rental.description}}"
     address="{{rental.direction}}"

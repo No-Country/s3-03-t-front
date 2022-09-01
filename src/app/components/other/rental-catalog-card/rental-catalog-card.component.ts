@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+//icons
+import { faMapMarkerAlt, faRulerCombined, faBath, faCouch, faPaw, faSmoking } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-rental-catalog-card',
   templateUrl: './rental-catalog-card.component.html',
@@ -12,40 +15,49 @@ export class RentalCatalogCardComponent implements OnInit {
     private router: Router
   ) { }
 
+  @Input() id!: string;
   @Input() bath!: string;
-  // @Input() description!: string;
-  // @Input() address!: string;
-  // @Input() firstName!: string;
-  // @Input() lastName!: string;
+  @Input() description!: string;
+  @Input() address!: string;
+  @Input() firstName!: string;
+  @Input() lastName!: string;
   @Input() furnished!: string;
   @Input() imgList!: any;
-  // @Input() locationCity!: any;
-  // @Input() locationState!: any;
-  // @Input() locationCountry!: any;
+  @Input() locationCity!: any;
+  @Input() locationState!: any;
+  @Input() locationCountry!: any;
   @Input() pets!: string;
-  // @Input() price!: string;
+  @Input() price!: string;
   @Input() smoker!: string;
-  // @Input() squareMeter!: string;
+  @Input() squareMeter!: string;
 
   // @Input() bath: string = "Baño compartido";
-  @Input() description: string = "Departamento 2 ambientes cerca a facultad de medicina de la UBA con muy buena ventilación";
-  @Input() address!: string;
-  @Input() firstName: string = "Andrea";
-  @Input() lastName: string = "Ortiz";
+  // @Input() description: string = "Departamento 2 ambientes cerca a facultad de medicina de la UBA con muy buena ventilación";
+  // @Input() address!: string;
+  // @Input() firstName: string = "Andrea";
+  // @Input() lastName: string = "Ortiz";
   // @Input() furnished: string = "Amoblado";
   // @Input() imgList: any = [{"fileUrl": "https://i.ibb.co/Lpq14Pg/Sin-t-tulo123.png"}];
-  @Input() locationCity: any = "Caballito";
-  @Input() locationState: any = "CABA";
-  @Input() locationCountry: any = "Argentina";
+  // @Input() locationCity: any = "Caballito";
+  // @Input() locationState: any = "CABA";
+  // @Input() locationCountry: any = "Argentina";
   // @Input() pets: string = "Acepta mascotas";
-  @Input() price!: string;
+  // @Input() price!: string;
   // @Input() smoker: string = "No acepta fumadores";
-  @Input() squareMeter: string = "12m2";
+  // @Input() squareMeter: string = "12m2";
 
   bathVal!: boolean;
   furnishedVal!: boolean;
   petsVal!: boolean;
   smokerVal!: boolean;
+
+  // icons
+  faMapMarkerAlt = faMapMarkerAlt;
+  faRulerCombined = faRulerCombined;
+  faBath = faBath;
+  faCouch = faCouch;
+  faPaw = faPaw;
+  faSmoking = faSmoking;
 
   ngOnInit(): void {
     if (this.bath === 'true') {
@@ -62,8 +74,8 @@ export class RentalCatalogCardComponent implements OnInit {
     }
   }
 
-  openDetail() {
-    this.router.navigate(['/rental:id'])
+  openDetail(id: string) {
+    this.router.navigate([`/rental/${id}`])
   }
 
 }

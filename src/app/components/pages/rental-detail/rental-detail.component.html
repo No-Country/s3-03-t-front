@@ -1,20 +1,82 @@
 <app-header></app-header>
-<main>
-    <article *ngIf="rental">
-        <img src="{{rental.imgList[0].fileUrl}}" alt="rental-image">
-    </article>
-    <section>
-        <article>
+<main *ngIf="rental" class="rental-detail-container">
+    <section class="rental-detail-hero-container">
+        <h1>{{rental.direction}}</h1>
+        <article class="rental-detail-hero-image-container">
+            <img src="{{rental.imgList[0].fileUrl}}" alt="rental-image" class="rental-detail-hero-image">
+        </article>
+
+        <div class="rental-detail-hero-info-container">
+            <span class="rental-detail-hero-info-owner-container">
+                <span>
+                    PFP
+                </span>
+                <span>
+                    <h3>{{rental.firtName}} {{rental.lastName}}</h3>
+                    <p><fa-icon [icon]="faMapMarkerAlt"></fa-icon> {{rental.location.location}}</p>
+                </span>
+            </span>
+            <span>
+                <h2>$ {{rental.price}}</h2>
+            </span>            
+        </div>
+    </section>
+    
+    <section class="rental-detail-info-container">
+        <article class="rental-detail-info-description-container">
             <h3>Descripción</h3>
-            <p></p>
+            <p>{{rental.description}}</p>
         </article>
-        <article>
+
+        <article class="rental-detail-info-features-container">
             <h3>Características</h3>
-            <p></p>
+            <p>
+                <fa-icon [icon]="faRulerCombined"></fa-icon>
+                {{rental.squareMeter}}
+            </p>
+            <!-- Baño -->
+            
+            <div *ngIf="rental.bath; then bathTrue else bathFalse"></div>
+            <ng-template #bathTrue>
+                
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faBath"></fa-icon> Baño propio</p>
+            </ng-template>
+            <ng-template #bathFalse>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faBath"></fa-icon> Baño compartido</p>
+            </ng-template>
+            <!-- Amoblado -->
+            <div *ngIf="rental.furnished; then furnishedTrue else furnishedFalse"></div>
+            <ng-template #furnishedTrue>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faCouch"></fa-icon> Amoblado</p>
+            </ng-template>
+            <ng-template #furnishedFalse>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faCouch"></fa-icon> Sin amoblar</p>
+            </ng-template>
+            <!-- Mascotas -->
+            <div *ngIf="rental.pet; then petsTrue else petsFalse"></div>
+            <ng-template #petsTrue>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faPaw"></fa-icon> Acepta mascotas</p>
+            </ng-template>
+            <ng-template #petsFalse>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faPaw"></fa-icon> No acepta mascotas</p>
+            </ng-template>
+            <!-- Fumador -->
+            <div *ngIf="rental.smoker; then smokerTrue else smokerFalse"></div>
+            <ng-template #smokerTrue>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faSmoking"></fa-icon> Acepta fumadores</p>
+            </ng-template>
+            <ng-template #smokerFalse>
+                <p class="rental-catalog-card-info-feature"><fa-icon [icon]="faSmoking"></fa-icon> No acepta fumadores</p>
+            </ng-template>
         </article>
-        <article>
+
+        <article class="rental-detail-info-requirements-container">
             <h3>Requisitos</h3>
+            <p><fa-icon [icon]="faListUl"></fa-icon> Recibo de ingresos</p>
+            <p><fa-icon [icon]="faListUl"></fa-icon> Garantía propietaria</p>
+            <p><fa-icon [icon]="faListUl"></fa-icon> Anticipo</p>
         </article>
+
         <button>
             Contactá al dueño
         </button>
