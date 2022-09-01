@@ -12,7 +12,19 @@ export class HeaderComponent implements OnInit {
     private logout: LogoutService
   ) { }
 
+  role!: string;
+  anfitrion!: boolean;
+  inquilino!: boolean;
+
   ngOnInit(): void {
+    this.role = localStorage.getItem('rol')!;
+    if(this.role === 'owner') {
+      this.anfitrion = true;
+      this.inquilino = false;
+    } else {
+      this.inquilino = true;
+      this.anfitrion = false;
+    }
   }
 
   disconnect() {
