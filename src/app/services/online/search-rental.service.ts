@@ -29,7 +29,7 @@ export class SearchRentalService {
     );
   }
 
-  getRental(id: number) {
+  getRental(id: string) {
     return this.http.get(
       `https://yourroom.herokuapp.com/property/${id}`
     )

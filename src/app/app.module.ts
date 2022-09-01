@@ -30,6 +30,8 @@ import { RentalCatalogComponent } from './components/pages/rental-catalog/rental
 import { RentalCatalogCardComponent } from './components/other/rental-catalog-card/rental-catalog-card.component';
 import { RentalDetailComponent } from './components/pages/rental-detail/rental-detail.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { RentalDetailComponent } from './components/pages/rental-detail/rental-d
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

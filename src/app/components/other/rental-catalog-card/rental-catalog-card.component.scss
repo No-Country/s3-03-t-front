@@ -31,12 +31,14 @@
 
     .rental-catalog-card-info-container {
         .rental-catalog-card-info-features {
+            font-weight: lighter;
+            font-size: 0.90rem;
             padding: 0.75rem;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             .rental-catalog-card-info-feature {
-                padding: 0 0.5rem 0 0.5rem;
+                padding: 0.25rem 0;
             }
         }
         .rental-catalog-card-info-description {
