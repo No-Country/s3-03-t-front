@@ -26,10 +26,19 @@
         <input type="radio" formControlName="fumador" name="fumador" id="no-acepta-fumadores" value="false">
         <label for="no-acepta-fumadores">No se permite fumar</label>
 
-        <select name="location" id="location" formControlName="location">
-                <option value="5">flores</option>
+        <!-- location -->
+        <select name="location-country" id="location-country" formControlName="locationCountry" #countryInput (change)="setCountry(countryInput)">
+                <option value={{country.code}} *ngFor="let country of countries">{{country.name}}</option>
+        </select>
+        <select name="location-region" id="location-region" formControlName="locationRegion" #regionInput (change)="setRegion(regionInput)">
+                <option value={{region.region}} *ngFor="let region of regions">{{region.region}}</option>
+        </select>
+        <select name="location-city" id="location-city" formControlName="locationCity" #cityInput (change)="setCity(cityInput)">
+                <option value={{city.city}} *ngFor="let city of cities">{{city.city}}</option>
         </select>
 
+        <!-- subida de imagenes -->
         <input type="file" name="image" id="image" formControlName="image" #imageInput (change)="processFile(imageInput)">
+        
         <button>Crear</button>
 </form>

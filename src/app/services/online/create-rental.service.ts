@@ -20,7 +20,7 @@ export class CreateRentalService {
 
   body: any;
 
-  createRental(rental: RentalInterface, img: any) {
+  createRental(rental: RentalInterface, locationId: any, img: any) {
 
     this.headers = this.httpHeaders.getHeaders();
 
@@ -34,7 +34,7 @@ export class CreateRentalService {
       "furnished": rental.mobiliario,
       "smoker": rental.fumador,
       "squareMeter": rental.metrosCuadrados,
-      "location": {"id": rental.location}
+      "location": {"id": locationId}
     }
 
     console.log(this.body);
