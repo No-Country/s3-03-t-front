@@ -17,10 +17,12 @@ export class SelectRoleComponent implements OnInit {
 
   selectAnfitrion() {
     this.router.navigate(['/my-rentals']);
+    localStorage.setItem('rol', 'owner');
   }
 
   selectInquilino() {
     this.router.navigate(['/search-rental']);
+    localStorage.setItem('rol', 'tenant');
   }
 
 }
