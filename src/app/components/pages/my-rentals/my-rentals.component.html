@@ -3,7 +3,8 @@
     <h1>
         Mis propiedades en alquiler
     </h1>
-    <section *ngIf="rentals; else emptyRentalsBlock">
+    <section *ngIf="rentals; else emptyRentalsBlock" class="rental-catalog-container">
+        
         <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
             id="{{rental.id}}"
             bath="{{rental.bath}}"

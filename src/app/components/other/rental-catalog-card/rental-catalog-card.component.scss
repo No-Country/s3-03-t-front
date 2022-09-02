@@ -17,6 +17,7 @@
                 padding: 0.75rem 0 0 0.75rem;
             }
             .rental-catalog-card-title-location {
+                font-size: 0.75rem;
                 margin: 0;
                 padding: 0 0 0.75rem 0.75rem;
             }
@@ -25,7 +26,7 @@
 
     .rental-catalog-card-photo-container {
         display: flex;
-        max-height: 300px;
+        max-height: 279px;
         overflow: hidden;
     }
 
@@ -38,7 +39,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             .rental-catalog-card-info-feature {
-                padding: 0.25rem 0;
+                padding: 0.25rem 0.25rem;
             }
         }
         .rental-catalog-card-info-description {
@@ -47,8 +48,13 @@
     }
 
     button {
+        background-color: var(--button-third-color);
         position: absolute;
-        top: 50px;
-        right: 0;
+        top: 35px;
+        right: 5px;
+        padding: 15px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
     }
 }

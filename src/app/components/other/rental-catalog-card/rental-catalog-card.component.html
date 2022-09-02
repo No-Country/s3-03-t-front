@@ -51,6 +51,9 @@
         </div>
     </div>
     <div>
-        <button (click)="openDetail(id)">heart</button>
+        <button (click)="openDetail(id)">
+            <fa-icon [icon]="faExternalLinkAlt" *ngIf="inquilino"></fa-icon>
+            <fa-icon [icon]="faEdit" *ngIf="anfitrion"></fa-icon>
+        </button>
     </div>
 </article>
