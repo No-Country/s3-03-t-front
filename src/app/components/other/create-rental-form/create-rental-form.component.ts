@@ -32,14 +32,11 @@ export class CreateRentalFormComponent implements OnInit {
 
   //location api
   locationId: any;
-
   countries: any = [];
-  selectedCountryCode!: any;
-  selectedCountry!: any;
-
+    selectedCountryCode!: any;
+    selectedCountry!: any;
   regions: any = [];
-  selectedRegion!: any;
-
+    selectedRegion!: any;
   cities: any = [];
 
   setCountry(countryInput: any) {
@@ -133,7 +130,6 @@ export class CreateRentalFormComponent implements OnInit {
 
   processFile(imageInput: any){
     this.selectedFile = imageInput.files[0];
-    console.log(this.selectedFile);
   }
 
   send(): void {

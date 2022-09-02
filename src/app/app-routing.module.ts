@@ -7,7 +7,7 @@ import { IndexComponent } from './components/pages/index/index.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { LoginComponent } from './components/pages/login/login.component';
 // import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
-// import { AccountComponent } from './components/pages/account/account.component';
+import { AccountComponent } from './components/pages/account/account.component';
 import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
 import { RentalDetailComponent } from './components/pages/rental-detail/rental-detail.component';
 // import { ChatComponent } from './components/pages/chat/chat.component';
@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   // { path: 'forgot-password', component: ForgotPasswordComponent },
-  // { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
+  { path: 'account', component: AccountComponent, canActivate: [AuthGuard] },
   { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] },
   { path: 'rental/:id', component: RentalDetailComponent },
   // { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },

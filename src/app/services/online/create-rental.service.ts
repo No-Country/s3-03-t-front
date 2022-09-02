@@ -37,8 +37,6 @@ export class CreateRentalService {
       "location": {"id": locationId}
     }
 
-    console.log(this.body);
-
     let formData = new FormData();
 
     let propertyBlob = new Blob([
