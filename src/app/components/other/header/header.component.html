@@ -16,15 +16,20 @@
       <div class="header-session-button-action" [routerLink]="['','create-rental']" routerLinkActive="activeRoute">
         Cargar propiedad 
       </div>
-      <div class="header-session-button-action" [routerLink]="['','search-roommate']" routerLinkActive="activeRoute">
-        Buscar Compañero
+      <div class="header-session-button-action" [routerLink]="['','my-rentals']" routerLinkActive="activeRoute">
+        Mis propiedades
       </div>
     </article>
   </section>
 
     <article class="header-session-buttons-profile">
-      <div class="header-session-button-action" [routerLink]="['','select-role']" routerLinkActive="activeRoute">
-        Soy inquilino
+      <div class="header-session-button-action" [routerLink]="['','select-role']" routerLinkActive="activeRoute"
+      *ngIf="inquilino">
+        Soy inquilino (cambiar)
+      </div>
+      <div class="header-session-button-action" [routerLink]="['','select-role']" routerLinkActive="activeRoute"
+      *ngIf="anfitrion">
+        Soy anfitrion (cambiar)
       </div>
       <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRouteSession">
         PFP

@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     if(this.role === 'owner') {
       this.anfitrion = true;
       this.inquilino = false;
-    } else {
+    } else if (this.role === 'tenant') {
       this.inquilino = true;
       this.anfitrion = false;
     }
