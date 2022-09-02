@@ -31,6 +31,7 @@ export class LoginService {
 
   saveUser(user: any){
     this.user = user;
+    localStorage.setItem('userId', user.id)
     localStorage.setItem('token', user.token);
     localStorage.setItem('role', user.role);
     localStorage.setItem('firstName', user.firstName);

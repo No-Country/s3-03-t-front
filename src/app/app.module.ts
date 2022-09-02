@@ -31,6 +31,7 @@ import { RentalCatalogCardComponent } from './components/other/rental-catalog-ca
 import { RentalDetailComponent } from './components/pages/rental-detail/rental-detail.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MyRentalsComponent } from './components/pages/my-rentals/my-rentals.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CreateRentalFormComponent,
     RentalCatalogComponent,
     RentalCatalogCardComponent,
-    RentalDetailComponent
+    RentalDetailComponent,
+    MyRentalsComponent
   ],
   imports: [
     BrowserModule,

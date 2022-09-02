@@ -15,7 +15,7 @@ import { RentalDetailComponent } from './components/pages/rental-detail/rental-d
 
 //rutas anfitrión
 import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
-// import { MyRentals } from './components/pages/my-rentals/my-rentals.component';
+import { MyRentalsComponent } from './components/pages/my-rentals/my-rentals.component';
 
 //rutas inquilino
 import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
@@ -40,7 +40,7 @@ const routes: Routes = [
   { path: 'create-rental', component: CreateRentalComponent
   // , canActivate: [AuthGuard] 
 },
-  // { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
+  { path: 'my-rentals', component: MyRentalsComponent, },
 
   //rutas inquilino
   { path: 'search-rental', component: SearchRentalComponent
