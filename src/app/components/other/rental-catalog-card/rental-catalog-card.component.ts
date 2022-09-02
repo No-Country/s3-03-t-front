@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //icons
-import { faMapMarkerAlt, faRulerCombined, faBath, faCouch, faPaw, faSmoking } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faRulerCombined, faBath, faCouch, faPaw, faSmoking, faExternalLinkAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-rental-catalog-card',
@@ -14,6 +14,11 @@ export class RentalCatalogCardComponent implements OnInit {
   constructor(
     private router: Router
   ) { }
+
+  //role service
+  role!: string;
+  anfitrion!: boolean;
+  inquilino!: boolean;
 
   @Input() id!: string;
   @Input() bath!: string;
@@ -58,6 +63,8 @@ export class RentalCatalogCardComponent implements OnInit {
   faCouch = faCouch;
   faPaw = faPaw;
   faSmoking = faSmoking;
+  faExternalLinkAlt = faExternalLinkAlt;
+  faEdit = faEdit;
 
   ngOnInit(): void {
     if (this.bath === 'true') {
@@ -71,6 +78,15 @@ export class RentalCatalogCardComponent implements OnInit {
     }
     if (this.smoker === 'true') {
       this.smokerVal = true;
+    }
+
+    this.role = localStorage.getItem('rol')!;
+    if(this.role === 'owner') {
+      this.anfitrion = true;
+      this.inquilino = false;
+    } else if (this.role === 'tenant') {
+      this.inquilino = true;
+      this.anfitrion = false;
     }
   }
 
