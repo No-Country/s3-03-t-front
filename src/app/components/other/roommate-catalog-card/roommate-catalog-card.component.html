@@ -1,0 +1,14 @@
+<article class="roommate-catalog-card-container">
+    <div *ngIf="img" class="roommate-catalog-card-photo-container">
+        <img src="{{img}}" alt="img">
+    </div>
+    <div class="roommate-catalog-card-title-container">
+        <span class="roommate-catalog-card-title-text-container">
+            <h3 class="roommate-catalog-card-title-name">{{firstName}} {{lastName}}</h3>
+        </span>
+        <span class="roommate-catalog-card-title-button-container">
+            <button><fa-icon [icon]="faComments" class="fa-lg"></fa-icon></button>
+        </span>
+    </div>
+        
+</article>

@@ -33,6 +33,8 @@ import { RentalDetailComponent } from './components/pages/rental-detail/rental-d
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MyRentalsComponent } from './components/pages/my-rentals/my-rentals.component';
 import { AccountComponent } from './components/pages/account/account.component';
+import { RoommateCatalogComponent } from './components/pages/roommate-catalog/roommate-catalog.component';
+import { RoommateCatalogCardComponent } from './components/other/roommate-catalog-card/roommate-catalog-card.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { AccountComponent } from './components/pages/account/account.component';
     RentalCatalogCardComponent,
     RentalDetailComponent,
     MyRentalsComponent,
-    AccountComponent
+    AccountComponent,
+    RoommateCatalogComponent,
+    RoommateCatalogCardComponent
   ],
   imports: [
     BrowserModule,
