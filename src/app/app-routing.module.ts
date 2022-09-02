@@ -21,7 +21,9 @@ import { MyRentalsComponent } from './components/pages/my-rentals/my-rentals.com
 import { SearchRentalComponent } from './components/pages/search-rental/search-rental.component';
 import { RentalCatalogComponent } from './components/pages/rental-catalog/rental-catalog.component';
 import { SearchRoommateComponent } from './components/pages/search-roommate/search-roommate.component';
+import { RoommateCatalogComponent } from './components/pages/roommate-catalog/roommate-catalog.component';
 import { RentalCatalogCardComponent } from './components/other/rental-catalog-card/rental-catalog-card.component';
+import { RoommateCatalogCardComponent } from './components/other/roommate-catalog-card/roommate-catalog-card.component';
 
 
 const routes: Routes = [
@@ -43,16 +45,13 @@ const routes: Routes = [
   { path: 'my-rentals', component: MyRentalsComponent, },
 
   //rutas inquilino
-  { path: 'search-rental', component: SearchRentalComponent
-  // , canActivate: [AuthGuard] 
-},
-  { path: 'rental-catalog', component: RentalCatalogComponent
-  // , canActivate: [AuthGuard]
-},
+  { path: 'search-rental', component: SearchRentalComponent },
+  { path: 'rental-catalog', component: RentalCatalogComponent },
 
-  { path: 'card', component: RentalCatalogCardComponent },
+  { path: 'card', component: RoommateCatalogCardComponent },
 
-  { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] }
+  { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] },
+  { path: 'roommate-catalog', component: RoommateCatalogComponent, canActivate: [AuthGuard] }
 ];
 
 

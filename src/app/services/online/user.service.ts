@@ -16,6 +16,17 @@ export class UserService {
 
   body: any;
 
+  getAllUsers() {
+    this.headers = this.httpHeadersService.getHeaders();
+
+    return this.http.get(
+      'https://yourroom.herokuapp.com/user/all',
+      {
+        headers: this.headers
+      }
+    )
+  }
+
   getUser(userId: any) {
     this.headers = this.httpHeadersService.getHeaders();
     return this.http.get(
