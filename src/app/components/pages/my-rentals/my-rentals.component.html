@@ -1,0 +1,28 @@
+<app-header></app-header>
+<main>
+    <h1>
+        Mis propiedades en alquiler
+    </h1>
+    <section *ngIf="rentals; else emptyRentalsBlock">
+        <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
+            id="{{rental.id}}"
+            bath="{{rental.bath}}"
+            description="{{rental.description}}"
+            address="{{rental.direction}}"
+            firstName="{{rental.firtName}}"
+            lastName="{{rental.lastName}}"
+            furnished="{{rental.furnished}}"
+            imgList="{{listaImg[j]}}"
+            locationCity="{{rental.location.location}}"
+            locationState="{{rental.location.province}}"
+            locationCountry="{{rental.location.country}}"
+            pets="{{rental.pet}}"
+            price="{{rental.price}}"
+            smoker="{{rental.smoker}}"
+            squareMeter="{{rental.squareMeter}}">
+        </app-rental-catalog-card>
+    </section>
+    <ng-template #emptyRentalsBlock>
+        No has publicado ninguna propiedad aún, hazlo<a href="/create-rental"> aquí</a>
+    </ng-template>
+</main>
