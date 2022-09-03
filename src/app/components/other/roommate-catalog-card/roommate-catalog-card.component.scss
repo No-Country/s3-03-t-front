@@ -22,6 +22,13 @@
         display: flex;
         max-height: 279px;
         overflow: hidden;
+        justify-content: center;
+        // text-align: center;
+        .roommate-catalog-card-photo {
+            display: block;
+            max-width: 400px;
+            width: auto;
+        }
     }
 
     .roommate-catalog-card-title-button-container {

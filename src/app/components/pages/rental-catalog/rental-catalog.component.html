@@ -1,4 +1,5 @@
 <app-header></app-header>
+<h1>{{rentals.length}} habitaciones en alquiler en Share.com</h1>
 <section class="rental-catalog-container">
     <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
     id="{{rental.id}}"
