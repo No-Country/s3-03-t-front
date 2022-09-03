@@ -43,7 +43,9 @@ export class UserService {
     this.body = {
       "firstName": user.firstName,
       "lastName": user.lastName,
-      "email": user.email
+      "email": user.email,
+      "dni": user.dni,
+      "telephone": user.telephone
     }
 
     let formData = new FormData();
