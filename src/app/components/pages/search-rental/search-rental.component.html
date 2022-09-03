@@ -1,11 +1,15 @@
 <app-header></app-header>
-<div class="main-container">
-    <img src="../../../../assets/home/home-2609600_1920-1.png" alt="home-2609600_1920-1" class="search-rental-img">
-    <div class="form-container">
-        <app-search-rental-form class="search-rental-form"></app-search-rental-form>
+<main>
+    <div class="main-container">
+        <img src="../../../../assets/home/home-2609600_1920-1.png" alt="home-2609600_1920-1" class="search-rental-img">
+        <div class="form-container">
+            <app-search-rental-form class="search-rental-form"></app-search-rental-form>
+        </div>
     </div>
-</div>
-<app-advertise-edit-profile class="advertise-edit-profile"></app-advertise-edit-profile>
-<div class="info-card-container">
-    <app-info-card class="info-card" *ngFor="let text of texts" title="{{text.title}}" description="{{text.description}}"></app-info-card>
-</div>
+    <div class="advertise-container">
+        <app-advertise-edit-profile class="advertise-edit-profile"></app-advertise-edit-profile>
+    </div>
+    <div class="info-card-container">
+        <app-info-card class="info-card" *ngFor="let text of texts" title="{{text.title}}" description="{{text.description}}"></app-info-card>
+    </div>
+</main>

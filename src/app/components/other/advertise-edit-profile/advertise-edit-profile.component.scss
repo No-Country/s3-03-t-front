@@ -6,8 +6,10 @@
     border-radius: 20px;
     position: relative;
     .advertise-edit-profile-text {
-        padding: 1rem;
+        padding: 1.5rem 0 0 2rem;
+        max-width: 40%;
         width: 45vw;
+        font-size: 3rem;
     }
     .advertise-edit-profile-img {
         position: absolute;
@@ -15,6 +17,11 @@
         right: 0;
         z-index: -1;
     }
+
+    .advertise-edit-profile-button-container {
+        padding: 0 2rem;
+    }
+
     .advertise-edit-profile-button {
         padding: 0.5rem 2rem;
         border: none;
@@ -24,5 +31,6 @@
         font-size: 1.5rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        font-family: var(--text-primary-font);
     }
 }
