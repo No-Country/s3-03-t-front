@@ -1,0 +1,52 @@
+main {
+    padding: 3vh 10vw 0;
+    form {
+        background-color: #F9F9F9;
+        box-shadow: 2px 6px 11px rgba(107, 8, 39, 0.25);
+        border-radius: 10px;
+        h1 {
+            padding: 3vh 0 3vh 3vw;
+        }
+        h2 {
+            padding: 0 0 2vh 3vw;
+        }
+        label {
+            padding: 0 2vw 0 0;
+        }
+
+        .edit-account-form-input-container {
+            padding: 0 0 3vh 3vw;
+        }
+
+        .edit-account-form-button-container {
+            text-align: right;
+            padding: 0 3vw 3vh 0;
+            .edit-account-form-button {
+                font-family: var(--text-primary-font);
+                padding: 0.5rem 3rem;
+                border: none;
+                border-radius: 40px;
+                color: var(--text-primary-color);
+                background-color: var(--button-secondary-color);
+                font-size: 1.5rem;
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.vector-1 {
+    position: absolute;
+    width: 23vw;
+    left: 0;
+    top: 15vh;
+    z-index: -1;
+}
+.vector-2 {
+    position: absolute;
+    height: 80vh;
+    right: 0;
+    top: 15vh;
+    z-index: -1;
+}

@@ -1,20 +1,33 @@
 <app-header></app-header>
+<img src="../../../../assets/account/Vector1.png" alt="Vector1" class="vector-1">
 <main *ngIf="user">
     <form [formGroup]="form" (submit)="send(user, selectedFile)" autocomplete="off">
+        <h1>Mi Perfil</h1>
+        <h2>Datos personales</h2>
         <div class="edit-account-form-input-container edit-account-form-input-container-first-name">
-            <label for="first-name">Nombre(s)</label>
+            <label for="first-name">Nombre(s):</label>
             <input type="text" formControlName="firstName" id="first-name" class="input-name">
         </div>
         <div class="edit-account-form-input-container edit-account-form-input-container-last-name">
-            <label for="last-name">Apellido(s)</label>
+            <label for="last-name">Apellido(s):</label>
             <input type="text" formControlName="lastName" id="last-name" class="input-name">
         </div>
         <!-- <div class="edit-account-form-input-container edit-account-form-input-container-dni">
             <input type="text" formControlName="dni" id="dni" placeholder="Documento N°">
         </div> -->
         <div class="edit-account-form-input-container edit-account-form-input-container-email">
-            <label for="email">Correo electrónico</label>
+            <label for="email">Correo electrónico:</label>
             <input type="text" formControlName="email" id="email">
+        </div>
+
+        <div class="edit-account-form-input-container edit-account-form-input-container-dni">
+            <label for="dni">Documento N°:</label>
+            <input type="text" formControlName="dni" id="dni">
+        </div>
+
+        <div class="edit-account-form-input-container edit-account-form-input-container-telephone">
+            <label for="telephone">Teléfono:</label>
+            <input type="text" formControlName="telephone" id="telephone">
         </div>
         <!-- <div class="edit-account-form-input-container edit-account-form-input-container-password">
             <input type="password" formControlName="password" id="password" placeholder="Contraseña" minlength="8">
@@ -24,11 +37,14 @@
         </div> -->
 
         <!-- subida de imagenes -->
-        <label for="image">Foto de perfil</label>
-        <input type="file" name="image" id="image" formControlName="image" #imageInput (change)="processFile(imageInput)">
+        <div class="edit-account-form-input-container edit-account-form-input-container-image">
+            <label for="image">Foto de perfil</label>
+            <input type="file" name="image" id="image" formControlName="image" #imageInput (change)="processFile(imageInput)">
+        </div>
 
         <div class="edit-account-form-button-container">
-            <button [disabled]="form.invalid">Guardar</button>
+            <button [disabled]="form.invalid" class="edit-account-form-button">Guardar</button>
         </div>
     </form>
 </main>
+<img src="../../../../assets/account/Vector2.png" alt="Vector2" class="vector-2">
