@@ -22,8 +22,6 @@ export class RentalCatalogComponent implements OnInit {
     this.searchRentalService.getAllRentals()
       .subscribe((res) => {
         this.rentals = res;
-        console.log(this.rentals);
-        
 
         for (let i = 0; i < this.rentals.length; i++) {
           if (this.rentals[i].imgList.length !== 0) {

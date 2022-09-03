@@ -26,7 +26,6 @@ export class AccountComponent implements OnInit {
 
     this.userService.getUser(this.userId)
       .subscribe((res) => {
-        console.log(res);
         this.user = res;
         this.form.get('firstName').setValue(this.user.firstName);
         this.form.get('lastName').setValue(this.user.lastName);
@@ -48,17 +47,13 @@ export class AccountComponent implements OnInit {
 
   processFile(imageInput: any) {
     this.selectedFile = imageInput.files[0];
-    console.log(imageInput.files[0]);
-    console.log(this.selectedFile);
-    
   }
 
   send() {
     this.userService.editUser(this.user, this.selectedFile)
       .subscribe((res) => {
-        console.log(res);
-      }, err => console.log(err)
-      )
+        window.location.reload();
+      })
   }
 
 }

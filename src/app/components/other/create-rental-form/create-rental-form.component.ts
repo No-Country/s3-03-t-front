@@ -137,12 +137,10 @@ export class CreateRentalFormComponent implements OnInit {
     try {
       this.createRental.createRental(this.form.value, this.locationId, this.selectedFile)
         .subscribe((res: any) => {
-          console.log(res);
           this.id = res.id;
           this.router.navigate([`/rental/${this.id}`])
-        }, (err) => console.log(err))
+        })
     } catch (error) {
-        console.log(error);
       }
 
   }

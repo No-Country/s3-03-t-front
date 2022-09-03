@@ -82,11 +82,11 @@ export class SearchRentalFormComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    // this.http.get(
-    //   `${this.crossDomain}/http://battuta.medunes.net/api/country/all/?key=5101bc4ce4082219254f2b3871402060`
-    // ).subscribe((res) => {
-    //   this.countries = res;
-    // });
+    this.http.get(
+      `${this.crossDomain}/http://battuta.medunes.net/api/country/all/?key=5101bc4ce4082219254f2b3871402060`
+    ).subscribe((res) => {
+      this.countries = res;
+    });
 
     localStorage.removeItem('filterRegion');
     localStorage.removeItem('filterCity');
@@ -121,9 +121,7 @@ export class SearchRentalFormComponent implements OnInit {
         localStorage.setItem('filterMaxPrice', this.form.value.maxPrice);
       },
       (err) => {
-        console.log(err);
         if (err.status = 401) {
-          console.log('err status 401 session timeout')
           this.router.navigate(['/login']);
         };
       }

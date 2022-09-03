@@ -24,6 +24,5 @@ export class RoommateCatalogCardComponent implements OnInit {
   }
 
   send() {
-    alert('proximamente')
   }
 }
