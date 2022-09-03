@@ -72,7 +72,7 @@ export class SearchRentalFormComponent implements OnInit {
       }
     ).subscribe((res: any) => {
       if (res.length === 0){
-        alert("no hay propiedades publicadas en esta ciudad")
+        alert("No hay propiedades publicadas en esta ciudad")
       }
       else {
         this.locationId = res[0]?.id;

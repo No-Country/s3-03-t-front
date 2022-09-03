@@ -39,17 +39,13 @@ const routes: Routes = [
   // { path: '**', component: NotFoundComponent },
 
   //rutas anfitrión
-  { path: 'create-rental', component: CreateRentalComponent
-  // , canActivate: [AuthGuard] 
-},
-  { path: 'my-rentals', component: MyRentalsComponent, },
+  { path: 'create-rental', component: CreateRentalComponent, canActivate: [AuthGuard] },
+  { path: 'my-rentals', component: MyRentalsComponent, canActivate: [AuthGuard] },
 
   //rutas inquilino
-  { path: 'search-rental', component: SearchRentalComponent },
-  { path: 'rental-catalog', component: RentalCatalogComponent },
-
-  { path: 'card', component: RoommateCatalogCardComponent },
-
+  { path: 'search-rental', component: SearchRentalComponent, canActivate: [AuthGuard] },
+  { path: 'rental-catalog', component: RentalCatalogComponent, canActivate: [AuthGuard] },
+  // { path: 'card', component: RoommateCatalogCardComponent },
   { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] },
   { path: 'roommate-catalog', component: RoommateCatalogComponent, canActivate: [AuthGuard] }
 ];
