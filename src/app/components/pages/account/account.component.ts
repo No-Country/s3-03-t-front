@@ -18,7 +18,7 @@ export class AccountComponent implements OnInit {
 
   userId = localStorage.getItem('userId');
 
-  selectedFile: any;
+  selectedFile!: any;
 
   user: any;
 
@@ -48,13 +48,17 @@ export class AccountComponent implements OnInit {
 
   processFile(imageInput: any) {
     this.selectedFile = imageInput.files[0];
+    console.log(imageInput.files[0]);
+    console.log(this.selectedFile);
+    
   }
 
-  send(user: any, selectedFile: any) {
-    this.userService.editUser(user, selectedFile)
+  send() {
+    this.userService.editUser(this.user, this.selectedFile)
       .subscribe((res) => {
         console.log(res);
-      })
+      }, err => console.log(err)
+      )
   }
 
 }

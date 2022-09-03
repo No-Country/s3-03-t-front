@@ -1,7 +1,7 @@
 <app-header></app-header>
 <img src="../../../../assets/account/Vector1.png" alt="Vector1" class="vector-1">
 <main *ngIf="user">
-    <form [formGroup]="form" (submit)="send(user, selectedFile)" autocomplete="off">
+    <form [formGroup]="form" (submit)="send()" autocomplete="off">
         <h1>Mi Perfil</h1>
         <h2>Datos personales</h2>
         <div class="edit-account-form-input-container edit-account-form-input-container-first-name">

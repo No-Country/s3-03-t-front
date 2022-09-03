@@ -53,12 +53,14 @@ export class UserService {
     let dataBlob = new Blob([
       JSON.stringify(this.body)
     ], {type: "application/json"});
+    
+    formData.set('user', dataBlob);
+
     let imageBlob = new Blob([
       img
-    ], {type: "image/png"});
-    formData.append('user', dataBlob);
-    formData.append('image', imageBlob);
+    ], {type : "image/png"});
 
+    formData.set('image', imageBlob);
 
     return this.http.put(
       'https://yourroom.herokuapp.com/user/update',
@@ -66,7 +68,7 @@ export class UserService {
       {
         headers: this.headers
       }
-    )
+    );
   }
 
 }

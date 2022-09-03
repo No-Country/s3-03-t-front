@@ -10,17 +10,20 @@ export class RoommateCatalogCardComponent implements OnInit {
 
   constructor() { }
 
-  // @Input() firstName: any;
-  // @Input() lastName: any;
-  // @Input() img: any;
+  @Input() firstName: any;
+  @Input() lastName: any;
+  @Input() img: any;
 
-  @Input() firstName: any = "Omar";
-  @Input() lastName: any = "Rodriguez";
-  @Input() img: any = "https://i.ibb.co/hD6hNcM/Rectangle-33.png";
+  // @Input() firstName: any = "Omar";
+  // @Input() lastName: any = "Rodriguez";
+  // @Input() img: any = "https://i.ibb.co/hD6hNcM/Rectangle-33.png";
 
   faComments = faComments;
 
   ngOnInit(): void {
   }
 
+  send() {
+    alert('proximamente')
+  }
 }
