@@ -1,0 +1,49 @@
+* {
+    font-family: var(--text-primary-font);
+}
+
+form {
+    text-align: center;
+    width: 346px;
+    height: 217px;
+    background-color: #FCFEF1;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+    .login-form-input-email {
+        padding: 2rem 0 1rem;
+
+    }
+    .login-form-input-password {
+        padding: 0 0 1rem;
+    }
+
+    input {
+        padding: 0.5rem;
+        width: 80%;
+        background-color: #FCFEF1;
+        border-width: 0.5pt;
+    }
+
+    input.ng-dirty.ng-invalid {
+        border-color: #FF0000;
+    }
+
+    button {
+        padding: 0.5rem 2rem;
+        border: none;
+        border-radius: 40px;
+        color: var(--text-primary-color);
+        background-color: var(--button-secondary-color);
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
+
+img{
+  z-index: -1;
+}
+
+button:disabled {
+  opacity: 0.7;
+}

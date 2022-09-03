@@ -1,0 +1,30 @@
+main {
+    min-height: 56vh;
+    max-height: 70vh;
+    position: relative;
+}
+
+.login-form {
+    margin: 5vh 25vw 29vh;
+}
+
+.login-img {
+    width: 44vw;
+    position: absolute;
+    right: 10vw;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.vector-1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.vector-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

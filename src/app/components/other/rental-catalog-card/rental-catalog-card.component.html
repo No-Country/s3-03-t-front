@@ -1,0 +1,61 @@
+<article class="rental-catalog-card-container">
+    <div class="rental-catalog-card-title-container">
+        <!-- <span class="rental-catalog-card-title-image-container">
+
+        </span> -->
+        <span class="rental-catalog-card-title-text-container">
+            <h3 class="rental-catalog-card-title-name">{{firstName}} {{lastName}}</h3>
+            <p class="rental-catalog-card-title-location"><fa-icon [icon]="faMapMarkerAlt"></fa-icon> {{locationCity}}, {{locationState}}</p>
+        </span>
+    </div>
+    <div *ngIf="imgList" class="rental-catalog-card-photo-container">
+        <img src="{{imgList}}" alt="img">
+    </div>
+    <div class="rental-catalog-card-info-container">
+        <div class="rental-catalog-card-info-features">
+            
+            <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faRulerCombined"></fa-icon> {{squareMeter}}m²</span>
+            <!-- Baño -->
+            <div *ngIf="bathVal; then bathTrue else bathFalse"></div>
+            <ng-template #bathTrue>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faBath"></fa-icon> Baño propio</span>
+            </ng-template>
+            <ng-template #bathFalse>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faBath"></fa-icon> Baño compartido</span>
+            </ng-template>
+            <!-- Amoblado -->
+            <div *ngIf="furnishedVal; then furnishedTrue else furnishedFalse"></div>
+            <ng-template #furnishedTrue>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faCouch"></fa-icon> Amoblado</span>
+            </ng-template>
+            <ng-template #furnishedFalse>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faCouch"></fa-icon> Sin amoblar</span>
+            </ng-template>
+            <!-- Mascotas -->
+            <div *ngIf="petsVal; then petsTrue else petsFalse"></div>
+            <ng-template #petsTrue>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faPaw"></fa-icon> Acepta mascotas</span>
+            </ng-template>
+            <ng-template #petsFalse>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faPaw"></fa-icon> No acepta mascotas</span>
+            </ng-template>
+            <!-- Fumador -->
+            <div *ngIf="smokerVal; then smokerTrue else smokerFalse"></div>
+            <ng-template #smokerTrue>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faSmoking"></fa-icon> Acepta fumadores</span>
+            </ng-template>
+            <ng-template #smokerFalse>
+                <span class="rental-catalog-card-info-feature"><fa-icon [icon]="faSmoking"></fa-icon> No acepta fumadores</span>
+            </ng-template>
+        </div>
+        <div class="rental-catalog-card-info-description">
+            <p>{{description}}</p>
+        </div>
+    </div>
+    <div>
+        <button (click)="openDetail(id)">
+            <fa-icon [icon]="faExternalLinkAlt" *ngIf="inquilino"></fa-icon>
+            <fa-icon [icon]="faEdit" *ngIf="anfitrion"></fa-icon>
+        </button>
+    </div>
+</article>

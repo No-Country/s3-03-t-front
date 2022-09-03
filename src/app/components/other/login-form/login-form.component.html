@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
+    <div class="login-form-input-email">
+        <input type="text" formControlName="email" id="email" placeholder="Correo electrónico">
+    </div>
+    <div class="login-form-input-password">
+        <input type="password" formControlName="password" id="password" placeholder="Contraseña" minlength="8">
+    </div>
+    <div class="login-form-button">
+        <button [disabled]="form.invalid">Iniciar sesión</button>
+    </div>
+</form>

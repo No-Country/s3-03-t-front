@@ -1,0 +1,84 @@
+<!-- <main> -->
+    <form [formGroup]="form" (submit)="send()" autocomplete="off">
+        <div class="search-rental-form-container-title">
+            <h1>Encuentra tu lugar y compañero ideal</h1>
+            <p class="search-rental-form-subtitle">Descubre alojamientos y los mejores compañeros que se adapten a tus necesidades</p>
+        </div>
+        
+        <!-- location -->
+        <div class="search-rental-form-container-location">
+            <label for="location-country">País</label>
+            <div class="search-rental-form-container search-rental-form-input-container-location">
+                    <select name="location-country" id="location-country" formControlName="locationCountry" #countryInput (change)="setCountry(countryInput)">
+                            <option value={{country.code}} *ngFor="let country of countries">{{country.name}}</option>
+                    </select>
+            </div>
+            <label for="location-region">Provincia/Región</label>
+            <div class="search-rental-form-container search-rental-form-input-container-location">
+                    <select name="location-region" id="location-region" formControlName="locationRegion" #regionInput (change)="setRegion(regionInput)">
+                            <option value={{region.region}} *ngFor="let region of regions">{{region.region}}</option>
+                    </select>
+            </div>
+            <label for="location-region">Ciudad/Localidad</label>
+            <div class="search-rental-form-container search-rental-form-input-container-location">
+                    <select name="location-city" id="location-city" formControlName="locationCity" #cityInput (change)="setCity(cityInput)">
+                            <option value={{city.city}} *ngFor="let city of cities">{{city.city}}</option>
+                    </select>
+            </div>
+        </div>
+
+        <!-- <div class="search-rental-form-container search-rental-form-container-fecha-ingreso">
+            <input type="text" formControlName="fechaIngreso" id="fecha-ingreso" placeholder="Fecha ingreso">
+        </div> -->
+        <div class="search-rental-form-container search-rental-form-container-caracteristicas">
+            <select name="mascotas" id="mascotas" formControlName="pet">
+                <option value="" disabled selected>Mascotas</option>
+                <option value={{true}}>Mascotas sí</option>
+                <option value={{false}}>Mascotas no</option>
+            </select>
+            <select name="banos" id="banos" formControlName="bath">
+                <option value="" disabled selected>Baño</option>
+                <option value={{true}}>Baño propio</option>
+                <option value={{false}}>Baño compartido</option>
+            </select>
+        </div>
+        <div class="search-rental-form-container-precios">
+            <label for="">Rango de precios</label>
+            <div class="search-rental-form-container-precios-rangos">
+                <span>
+                    <input type="text" list="precio-minimo" placeholder="Mín." formControlName="minPrice"/>
+                    <!-- <datalist id="precio-minimo">
+                        <option>20000</option>
+                        <option>40000</option>
+                        <option>60000</option>
+                        <option>80000</option>
+                        <option>100000</option>
+                    </datalist> -->
+                </span>
+                <span>
+                    <input type="text" list="precio-maximo" placeholder="Máx." formControlName="maxPrice" />
+                    <!-- <datalist id="precio-maximo">
+                        <option>20000</option>
+                        <option>40000</option>
+                        <option>60000</option>
+                        <option>80000</option>
+                        <option>100000</option>
+                    </datalist> -->
+                </span>
+            </div>
+        </div>
+        <!-- <div class="search-rental-form-container search-rental-form-container-privacidad">
+            <span>
+                <input type="radio" name="privacidad" id="habitacion" value="habitacion">
+            <label for="habitacion">Habitación</label>
+            </span>
+            <span>
+            <input type="radio" name="privacidad" id="departamento" value="departamento">
+            <label for="departamento">Departamento</label></span>
+        </div> -->
+        <div class="search-rental-form-container search-rental-form-button-container">
+            <button>Buscar</button>
+        </div>
+    </form>
+    
+<!-- </main> -->

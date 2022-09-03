@@ -1,0 +1,22 @@
+<app-header></app-header>
+<h1 *ngIf="rentals">{{rentals.length}} habitaciones en alquiler en Share.com</h1>
+<section class="rental-catalog-container">
+    <app-rental-catalog-card *ngFor="let rental of rentals; index as j"
+    id="{{rental.id}}"
+    bath="{{rental.bath}}"
+    description="{{rental.description}}"
+    address="{{rental.direction}}"
+    firstName="{{rental.firtName}}"
+    lastName="{{rental.lastName}}"
+    furnished="{{rental.furnished}}"
+    imgList="{{listaImg[j]}}"
+    locationCity="{{rental.location.location}}"
+    locationState="{{rental.location.province}}"
+    locationCountry="{{rental.location.country}}"
+    pets="{{rental.pet}}"
+    price="{{rental.price}}"
+    smoker="{{rental.smoker}}"
+    squareMeter="{{rental.squareMeter}}"
+    >
+    </app-rental-catalog-card>
+</section>
