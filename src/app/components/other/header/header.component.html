@@ -31,9 +31,24 @@
       *ngIf="anfitrion">
         Soy anfitrion (cambiar)
       </div>
-      <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRouteSession">
-        PFP
-      </div>
-      <button (click)="disconnect()">logout</button>
+
+      <!-- profile pic -->
+      <div *ngIf="userImgDefault; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRoute" *ngIf="">
+          <img src="../../../../assets/header/Profile-PNG-File.png" alt="profile-pic-empty" class="header-session-button-profile">
+        </div>
+      </ng-template>
+      <ng-template #elseBlock>
+        <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRoute" *ngIf="userImg">
+          <div class="header-session-button-profile-custom-container">
+            <img src="{{userImg}}" alt="profile-pic-empty" class="header-session-button-profile-custom">
+          </div>
+        </div>
+      </ng-template>
+      
+      
+
+      <button (click)="disconnect()" class="header-session-button-signout"><fa-icon [icon]="faSignOutAlt"></fa-icon></button>
     </article>
   </section>  
