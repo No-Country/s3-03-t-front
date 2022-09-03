@@ -19,7 +19,6 @@ export class RoommateCatalogComponent implements OnInit {
 
     this.userService.getAllUsers()
       .subscribe((res) => {
-        console.log(res);
         this.users = res;
 
         // for (let i = 0; i < this.users.length; i++) {
@@ -28,7 +27,7 @@ export class RoommateCatalogComponent implements OnInit {
         //   }
         // }
 
-      }, err => console.log(err)
+      }
       )
   }
 

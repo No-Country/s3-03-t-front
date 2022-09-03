@@ -18,6 +18,5 @@ export class LogoutService {
     );
     localStorage.clear();
     this.router.navigate(['/login']);
-    console.log('logged out');
   }
 }

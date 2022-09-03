@@ -19,7 +19,6 @@ export class HttpHeadersService {
     if (!this.token) {
       this.headers = new HttpHeaders()
         .set('Authorization', 'no valid token');
-        console.log('no token');
     };
 
     return this.headers;

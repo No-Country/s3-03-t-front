@@ -7,7 +7,10 @@
             <h3 class="roommate-catalog-card-title-name">{{firstName}} {{lastName}}</h3>
         </span>
         <span class="roommate-catalog-card-title-button-container">
-            <button (click)="send()"><fa-icon [icon]="faComments" class="fa-lg"></fa-icon></button>
+            <button (click)="send()"
+            [swal]="['Oops!', 'El chat aún no esta implementado, disculpe las molestias', 'warning']">
+                <fa-icon [icon]="faComments" class="fa-lg"></fa-icon>
+            </button>
         </span>
     </div>
         

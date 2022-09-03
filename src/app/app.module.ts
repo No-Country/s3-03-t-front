@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 // import { MatIconModule } from '@angular/material/icon';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 import { HeaderComponent } from './components/other/header/header.component';
 import { FooterComponent } from './components/other/footer/footer.component';
 import { IndexComponent } from './components/pages/index/index.component';
@@ -68,7 +70,8 @@ import { RoommateCatalogCardComponent } from './components/other/roommate-catalo
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
