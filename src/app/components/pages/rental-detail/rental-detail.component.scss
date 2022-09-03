@@ -1,0 +1,49 @@
+main {
+    padding: 3vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    font-family: var(--text-secondary-font);
+    .rental-detail-hero-container {
+        width: 80vw;
+        .rental-detail-hero-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e1e1e1;
+        }
+        .rental-detail-hero-info-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .rental-detail-hero-info-owner-container {
+                display: flex;
+            }
+        }
+    }
+
+    .rental-detail-info-container {
+        width: 60vw;
+        article {
+            padding: 1vh 0;
+        }
+
+    }
+
+    .rental-detail-button-container {
+        text-align: right;
+    }
+
+    button {
+        font-family: var(--text-primary-font);
+        padding: 0.5rem 3rem;
+        border: none;
+        border-radius: 40px;
+        color: var(--text-primary-color);
+        background-color: var(--button-secondary-color);
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}

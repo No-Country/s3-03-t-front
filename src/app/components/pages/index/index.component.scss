@@ -1,0 +1,39 @@
+@import '../../../../styles.scss';
+
+main {
+    font-family: var(--text-primary-font);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15vh;
+
+    section {
+        .index-left {
+            margin-left: 7vw;
+            h1 {
+            margin: 11vh 6vw 14vh 0;
+            color: var(--text-primary-color);
+            font-size: 40px;
+            }
+            a {
+                padding: 1rem 3rem;
+                border-radius: 40px;
+                color: var(--text-primary-color);
+                background-color: var(--button-secondary-color);
+                font-size: 30px;
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .index-img {
+            max-width: 50vw;
+        }
+    }
+}
+
+.vector {
+    width: 48vw;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+}

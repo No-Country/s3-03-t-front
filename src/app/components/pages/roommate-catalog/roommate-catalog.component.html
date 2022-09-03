@@ -1,0 +1,10 @@
+<app-header></app-header>
+<h1 *ngIf="users">{{users.length}} compañeros estan buscando alquilar en Share.com</h1>
+<section class="roommate-catalog-container" *ngIf="users">
+    <app-roommate-catalog-card *ngFor="let user of users"
+    firstName="{{user.firstName}}"
+    lastName="{{user.lastName}}"
+    img="{{user.image.fileUrl}}"
+    >
+    </app-roommate-catalog-card>
+</section>

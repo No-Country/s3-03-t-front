@@ -1,0 +1,32 @@
+main {
+    padding: 0 5vw;
+}
+
+.main-container {
+    position: relative;
+    padding: 0 0 7vh 0;
+    .search-rental-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: -1;
+    }
+    .form-container {
+        display: flex;
+        .search-rental-form {
+            padding: 2vw 0 0 3vw;
+        }
+    }
+}
+
+
+.advertise-container {
+    padding: 0 0 7vh 0;
+}
+
+.info-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3vw;
+}

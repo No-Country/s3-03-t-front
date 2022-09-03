@@ -1,0 +1,47 @@
+.roommate-catalog-card-container {
+    font-family: var(--text-secondary-font);
+    background-color: var(--card-background-color);
+    width: 25vw;
+    height: 350px;
+    // position: relative;
+
+    .roommate-catalog-card-title-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        .roommate-catalog-card-title-text-container {
+            .roommate-catalog-card-title-name {
+                display: inline-flex;
+                margin: 0;
+                padding: 0.75rem 0 0 0.75rem;
+            }
+        }
+    }
+
+    .roommate-catalog-card-photo-container {
+        display: flex;
+        max-height: 279px;
+        overflow: hidden;
+        justify-content: center;
+        // text-align: center;
+        .roommate-catalog-card-photo {
+            display: block;
+            max-width: 400px;
+            width: auto;
+        }
+    }
+
+    .roommate-catalog-card-title-button-container {
+        padding: 0 1rem;
+    }
+
+    button {
+        background-color: var(--button-third-color);
+        top: 35px;
+        right: 5px;
+        padding: 15px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+    }
+}

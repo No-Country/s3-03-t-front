@@ -1,0 +1,108 @@
+<form [formGroup]="form" (submit)="send()" autocomplete="off">
+        <div class="create-rental-form-input-container create-rental-form-input-container-address">
+                <input type="text" formControlName="direccion" name="direccion" id="direccion" placeholder="Dirección" class="create-rental-form-input-address">
+        </div>
+        <div class="create-rental-form-input-container create-rental-form-input-container-images">
+                <h3>Cargar imágenes</h3>
+                <input type="file" name="image" id="image" formControlName="image" #imageInput (change)="processFile(imageInput)" class="create-rental-form-input-image">
+        </div>
+        <div class="create-rental-form-input-container create-rental-form-input-container-description">
+                <textarea name="descripcion" formControlName="descripcion" id="descripcion" cols="30" rows="10" placeholder="Agrega una descripción"></textarea>
+        </div>
+        <div class="create-rental-form-input-container create-rental-form-input-container-price">
+              <input type="text" formControlName="precio" name="precio" id="precio" placeholder="Monto alquiler">  
+        </div>
+
+        <h2>Ubicación</h2>
+
+        <!-- location -->
+        <label for="location-country">País</label>
+        <div class="create-rental-form-input-container create-rental-form-input-container-location">
+                
+                <select name="location-country" id="location-country" formControlName="locationCountry" #countryInput (change)="setCountry(countryInput)">
+                        <option value={{country.code}} *ngFor="let country of countries">{{country.name}}</option>
+                </select>
+        </div>
+
+        <label for="location-region">Provincia/Región</label>
+        <div class="create-rental-form-input-container create-rental-form-input-container-location">
+                
+                <select name="location-region" id="location-region" formControlName="locationRegion" #regionInput (change)="setRegion(regionInput)">
+                        <option value={{region.region}} *ngFor="let region of regions">{{region.region}}</option>
+                </select>
+        </div>
+
+        <label for="location-region">Ciudad/Localidad</label>
+        <div class="create-rental-form-input-container create-rental-form-input-container-location">
+                <select name="location-city" id="location-city" formControlName="locationCity" #cityInput (change)="setCity(cityInput)">
+                        <option value={{city.city}} *ngFor="let city of cities">{{city.city}}</option>
+                </select>
+        </div>
+
+        <h2>Características de la propiedad</h2>
+
+        <div class="create-rental-form-input-container create-rental-form-input-container-rooms-quantity">
+                <input type="text" formControlName="ambientes" name="ambientes" id="ambientes" placeholder="Ambientes">
+        </div>
+        <div class="create-rental-form-input-container create-rental-form-input-container-square-meters">
+                <input type="text" formControlName="metrosCuadrados" name="metros-cuadrados" id="metros-cuadrados" placeholder="m²">
+        </div>
+
+        <!-- baño -->
+        <div class="create-rental-form-input-container create-rental-form-input-container-radio">
+                <span>
+                       <input type="radio" formControlName="bano" name="bano" id="bano-propio" value="true">
+                       <label for="bano-propio">Baño propio</label> 
+                </span>
+                <span>
+                        <input type="radio" formControlName="bano" name="bano" id="bano-compartido" value="false">
+                        <label for="bano-compartido">Baño compartido</label>    
+                </span>
+        </div>
+        
+        <!-- amoblado -->
+        <div class="create-rental-form-input-container create-rental-form-input-container-radio">
+                <span>
+                        <input type="radio" formControlName="mobiliario" name="mobiliario" id="amoblado" value="true">
+                        <label for="amoblado">Amoblado</label>
+                </span>
+                <span>
+                        <input type="radio" formControlName="mobiliario" name="mobiliario" id="sin-amoblar" value="false">
+                        <label for="sin-amoblar">Sin amoblar</label>
+                </span>
+        </div>
+        
+        <!-- mascotas -->
+        <div class="create-rental-form-input-container create-rental-form-input-container-pets">
+                <h4>¿Se aceptan mascotas?</h4>
+                <div class="create-rental-form-input-container create-rental-form-input-container-radio2">
+                        <span>
+                                <input type="radio" formControlName="mascotas" name="mascotas" id="acepta-mascotas" value="true">
+                                <label for="acepta-mascotas">Si</label>
+                        </span>
+                        
+                        <span>
+                                <input type="radio" formControlName="mascotas" name="mascotas" id="no-acepta-mascotas" value="false">
+                                <label for="no-acepta-mascotas">No</label>
+                        </span>
+                </div>
+        </div>
+        
+        <!-- fumador -->
+        <div class="create-rental-form-input-container create-rental-form-input-container-smoker">
+                <h4>¿Se aceptan fumadores?</h4>
+                <div class="create-rental-form-input-container create-rental-form-input-container-radio2">
+                        <span>
+                                <input type="radio" formControlName="fumador" name="fumador" id="acepta-fumadores" value="true">
+                                <label for="acepta-fumadores">Si</label>
+                        </span>
+                        <span>
+                                <input type="radio" formControlName="fumador" name="fumador" id="no-acepta-fumadores" value="false">
+                                <label for="no-acepta-fumadores">No</label>
+                        </span>      
+                </div>
+        </div>
+        <div class="create-rental-form-input-container create-rental-form-input-container-button">
+                <button>Crear</button>
+        </div>
+</form>

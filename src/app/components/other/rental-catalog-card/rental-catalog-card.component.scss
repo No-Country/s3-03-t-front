@@ -1,0 +1,60 @@
+.rental-catalog-card-container {
+    font-family: var(--text-secondary-font);
+    background-color: var(--card-background-color);
+    width: 25vw;
+    height: 520px;
+    position: relative;
+
+    .rental-catalog-card-title-container {
+        display: flex;
+        .rental-catalog-card-title-image-container {
+            padding: 1rem 0 0 1rem;
+        }
+        .rental-catalog-card-title-text-container {
+            .rental-catalog-card-title-name {
+                display: inline-flex;
+                margin: 0;
+                padding: 0.75rem 0 0 0.75rem;
+            }
+            .rental-catalog-card-title-location {
+                font-size: 0.75rem;
+                margin: 0;
+                padding: 0 0 0.75rem 0.75rem;
+            }
+        }
+    }
+
+    .rental-catalog-card-photo-container {
+        display: flex;
+        max-height: 279px;
+        overflow: hidden;
+    }
+
+    .rental-catalog-card-info-container {
+        .rental-catalog-card-info-features {
+            font-weight: lighter;
+            font-size: 0.90rem;
+            padding: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .rental-catalog-card-info-feature {
+                padding: 0.25rem 0.25rem;
+            }
+        }
+        .rental-catalog-card-info-description {
+            padding: 0 0.75rem 0 0.75rem;
+        }
+    }
+
+    button {
+        background-color: var(--button-third-color);
+        position: absolute;
+        top: 35px;
+        right: 5px;
+        padding: 15px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+    }
+}
