@@ -15,8 +15,27 @@
       display: flex;
     }
 
-    .header-session-button-profile {
+    .header-session-buttons-profile {
       display: flex;
+      align-items: center;
+    }
+
+    .header-session-button-profile {
+      height: 50px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-session-button-profile-custom-container {
+      overflow: hidden;
+      display: flex;
+      
+    }
+
+    .header-session-button-profile-custom {display: block;
+      max-width: 50px;
+      width: auto;
+      border-radius: 50%;
     }
   }
   
@@ -37,9 +56,17 @@
   
   .header-session-button-action{
     display: inline-block;
-    padding: 7px 20px;
+    padding: 0px 20px;
     border-radius: 20px;
     color: var(--text-third-color);
     margin-left: 0.5rem;
     cursor: pointer;
+  }
+
+  .header-session-button-signout {
+    background-color: inherit;
+    color: var(--text-third-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
   }

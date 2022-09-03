@@ -8,9 +8,9 @@
 
         <div class="rental-detail-hero-info-container">
             <span class="rental-detail-hero-info-owner-container">
-                <span>
-                    PFP
-                </span>
+                <!-- <span>
+
+                </span> -->
                 <span>
                     <h3>{{rental.firtName}} {{rental.lastName}}</h3>
                     <p><fa-icon [icon]="faMapMarkerAlt"></fa-icon> {{rental.location.location}}</p>
@@ -77,8 +77,11 @@
             <p><fa-icon [icon]="faListUl"></fa-icon> Anticipo</p>
         </article>
 
-        <button>
-            Contactá al dueño
-        </button>
+        <div class="rental-detail-button-container">
+            <button>
+                Contactá al dueño
+            </button>
+        </div>
+        
     </section>
 </main>
