@@ -1,27 +1,48 @@
-# CompaneroIdealFront
+# s3-03-t-front
+## Compañero ideal
+<p>Compañero ideal es una app para alquilar piezas para estudiantes que vienen del exterior a estudiar.<br>
+En la app se registrar Usuarios de tipo propietario e inquilino.</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+<h3>Back End</h3>
+<ul>
+    <li>Java - 11</li>
+    <li>Spring boot version "2.7.2" </li>
+    <li>Spring Security</li>
+    <li>Jpa, hibernate</li>
+    <li>Swagger - Postman</li>
+    <li>Lombok</li>
+    <li>Arquitectura MVC</li>
+</ul>
 
-## Development server
+<h3>Front End</h3>
+<ul>
+    <li>Typescript</li>
+    <li>Angular</li>
+    <li>Html5, Css3</li>
+    <li>Sass, SCSS</li>
+    <li>Font Awesome</li>
+    <li>Sweet Alert</li>
+</ul>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<h3>Diseño UX UI</h3>
+<ul>
+    <li>Figma</li>
+</ul>
 
-## Code scaffolding
+<h5>Back End</h5>
+<ul>
+    <li>Abel Acevedo Java Spring Boot (https://github.com/Abel3581)</li>
+    <li>Gabriel Navarro Java Spring Boot (https://github.com/gabynavarro)</li>
+    <li>Marcos Paz Goncheff Java Spring Boot (https://github.com/marcosep192000)</li>
+</ul>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h5>Front End</h5>
+<ul>
+    <li>Juan Bautista Iglesias (https://github.com/baut1) </li>
+</ul>
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h5>Diseño UX UI</h5>
+<ul>
+    <li>Johana Martinez</li>
+    <li>Micaela Macedonio</li>
+</ul>
