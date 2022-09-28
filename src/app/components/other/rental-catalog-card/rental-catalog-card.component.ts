@@ -20,6 +20,7 @@ export class RentalCatalogCardComponent implements OnInit {
   anfitrion!: boolean;
   inquilino!: boolean;
 
+  //imputs
   @Input() id!: string;
   @Input() bath!: string;
   @Input() description!: string;
@@ -36,21 +37,7 @@ export class RentalCatalogCardComponent implements OnInit {
   @Input() smoker!: string;
   @Input() squareMeter!: string;
 
-  // @Input() bath: string = "Baño compartido";
-  // @Input() description: string = "Departamento 2 ambientes cerca a facultad de medicina de la UBA con muy buena ventilación";
-  // @Input() address!: string;
-  // @Input() firstName: string = "Andrea";
-  // @Input() lastName: string = "Ortiz";
-  // @Input() furnished: string = "Amoblado";
-  // @Input() imgList: any = [{"fileUrl": "https://i.ibb.co/Lpq14Pg/Sin-t-tulo123.png"}];
-  // @Input() locationCity: any = "Caballito";
-  // @Input() locationState: any = "CABA";
-  // @Input() locationCountry: any = "Argentina";
-  // @Input() pets: string = "Acepta mascotas";
-  // @Input() price!: string;
-  // @Input() smoker: string = "No acepta fumadores";
-  // @Input() squareMeter: string = "12m2";
-
+  //boolean values
   bathVal!: boolean;
   furnishedVal!: boolean;
   petsVal!: boolean;

@@ -50,10 +50,15 @@ export class AccountComponent implements OnInit {
   }
 
   send() {
-    this.userService.editUser(this.user, this.selectedFile)
+    try {
+      this.userService.editUser(this.user, this.selectedFile)
       .subscribe((res) => {
         window.location.reload();
       })
+    } catch {
+      alert('error')
+    }
+    
   }
 
 }

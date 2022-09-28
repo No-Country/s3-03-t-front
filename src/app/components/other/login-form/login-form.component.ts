@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginInterface } from 'src/app/interfaces/login-interface';
 import { LoginService } from 'src/app/services/online/login.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-form',
@@ -34,16 +35,21 @@ export class LoginFormComponent implements OnInit {
   //post request a la api del backend
   send(): void {
     if (this.form.invalid) {
-      alert('Error: campos incorrectos')
+      Swal.fire('Error', 'Complete todos los campos', 'error');
     }else{
       this.loginService.signin(this.form.value)
       .subscribe((res) => {
         this.loginService.user = res;
         this.loginService.saveUser(res);
+        
         //redirect
         this._router.navigate(['/select-role']);
       }, (err) => {
-        alert(err.message)
+        if (err.status === 401){
+          Swal.fire('Error', 'Usuario y/o contraseña incorrectos', 'error');
+        } else {
+          alert(err.message);
+        }
       });
     }
   };

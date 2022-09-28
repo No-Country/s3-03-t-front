@@ -37,6 +37,10 @@ import { MyRentalsComponent } from './components/pages/my-rentals/my-rentals.com
 import { AccountComponent } from './components/pages/account/account.component';
 import { RoommateCatalogComponent } from './components/pages/roommate-catalog/roommate-catalog.component';
 import { RoommateCatalogCardComponent } from './components/other/roommate-catalog-card/roommate-catalog-card.component';
+import { SupportComponent } from './components/pages/support/support.component';
+import { HelpComponent } from './components/pages/help/help.component';
+import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,11 @@ import { RoommateCatalogCardComponent } from './components/other/roommate-catalo
     MyRentalsComponent,
     AccountComponent,
     RoommateCatalogComponent,
-    RoommateCatalogCardComponent
+    RoommateCatalogCardComponent,
+    SupportComponent,
+    HelpComponent,
+    PrivacyPolicyComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

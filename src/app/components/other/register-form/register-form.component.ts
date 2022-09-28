@@ -33,7 +33,7 @@ export class RegisterFormComponent implements OnInit {
 
   send(): void{
     if (this.form.invalid) {
-      alert("Complete todos los campos correctamente")
+      // popup alert ("Complete todos los campos correctamente")
     } else {
       this.registerService.register(this.form)
       .subscribe((res) => {
@@ -43,8 +43,6 @@ export class RegisterFormComponent implements OnInit {
     }
   }
 
-
-
   get passMatch(): boolean{
     return this.form.value.password.length > 0
     && this.form.value.password === this.form.value.confirmPassword
@@ -53,5 +51,4 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

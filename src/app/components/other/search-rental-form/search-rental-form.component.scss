@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 main {
     position: relative;
 }
@@ -115,14 +117,8 @@ form {
     }
 
     button {
+        @include button-primary;
         padding: 0.5rem 6rem;
-        border: none;
-        border-radius: 40px;
-        color: var(--text-primary-color);
-        background-color: var(--button-secondary-color);
-        font-size: 1.5rem;
-        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
         font-family: var(--text-primary-font);
     }
 }

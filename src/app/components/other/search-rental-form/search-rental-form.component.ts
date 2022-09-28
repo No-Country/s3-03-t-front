@@ -22,9 +22,10 @@ export class SearchRentalFormComponent implements OnInit {
     this.buildForm();
   }
 
+  //cors
   crossDomain: string = 'https://ancient-fjord-73536.herokuapp.com';
-  headers: any;
 
+  headers: any;
   form!: FormGroup;
 
   // location api

@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 main {
     padding: 3vh 10vw 0;
     form {
@@ -16,21 +18,24 @@ main {
 
         .edit-account-form-input-container {
             padding: 0 0 3vh 3vw;
+            input.ng-invalid {
+                color: #ff0000;
+                border-color: #ff0000;
+            }
         }
+
+
+
+
 
         .edit-account-form-button-container {
             text-align: right;
             padding: 0 3vw 3vh 0;
             .edit-account-form-button {
+                @include button-primary;
                 font-family: var(--text-primary-font);
                 padding: 0.5rem 3rem;
-                border: none;
-                border-radius: 40px;
-                color: var(--text-primary-color);
-                background-color: var(--button-secondary-color);
                 font-size: 1.5rem;
-                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
             }
         }
     }

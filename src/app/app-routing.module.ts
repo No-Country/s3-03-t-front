@@ -11,7 +11,10 @@ import { AccountComponent } from './components/pages/account/account.component';
 import { SelectRoleComponent } from './components/pages/select-role/select-role.component';
 import { RentalDetailComponent } from './components/pages/rental-detail/rental-detail.component';
 // import { ChatComponent } from './components/pages/chat/chat.component';
-// import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { SupportComponent } from './components/pages/support/support.component';
+import { HelpComponent } from './components/pages/help/help.component';
+import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 //rutas anfitrión
 import { CreateRentalComponent } from './components/pages/create-rental/create-rental.component';
@@ -36,7 +39,9 @@ const routes: Routes = [
   { path: 'select-role', component: SelectRoleComponent, canActivate: [AuthGuard] },
   { path: 'rental/:id', component: RentalDetailComponent },
   // { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
-  // { path: '**', component: NotFoundComponent },
+  { path: 'support', component: SupportComponent },
+  { path: 'help', component: HelpComponent },
+  { path: 'privacy-&-terms', component: PrivacyPolicyComponent },
 
   //rutas anfitrión
   { path: 'create-rental', component: CreateRentalComponent, canActivate: [AuthGuard] },
@@ -47,7 +52,8 @@ const routes: Routes = [
   { path: 'rental-catalog', component: RentalCatalogComponent, canActivate: [AuthGuard] },
   // { path: 'card', component: RoommateCatalogCardComponent },
   { path: 'search-roommate', component: SearchRoommateComponent, canActivate: [AuthGuard] },
-  { path: 'roommate-catalog', component: RoommateCatalogComponent, canActivate: [AuthGuard] }
+  { path: 'roommate-catalog', component: RoommateCatalogComponent, canActivate: [AuthGuard] },
+  { path: '**', component: NotFoundComponent }
 ];
 
 

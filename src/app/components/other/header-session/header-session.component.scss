@@ -6,7 +6,7 @@
   padding: 0.5rem 5rem;
   width: 100%;
   box-sizing: border-box;
-  background-color: var(--primaryHeader);
+  background-color: var(--primary-header);
   z-index: 1;
   position: relative;
   top: 0;
@@ -32,7 +32,7 @@
   display: inline-block;
   padding: 7px 20px;
   border-radius: 20px;
-  background-color: var(--buttonPrimaryAction);
+  background-color: var(--button-primary-action);
   margin-left: 0.5rem;
   cursor: pointer;
 }

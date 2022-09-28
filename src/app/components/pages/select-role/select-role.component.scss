@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 #img-rigth{
   position:absolute;
   right: 0;
@@ -32,18 +34,13 @@
 
 .actions-container-button{
   button{
+    @include button-primary;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--button-secondary-color);
-    color: black;
-    font-size: 1.7rem;
+    // font-size: 1.7rem;
     font-weight: bold;
-    border: none;
     padding: 15px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 1px 4px 10px rgb(0 0 0 / 10%);
   }
 }
 
@@ -62,4 +59,10 @@
   position: absolute;
   top: 71px;
   left: -148px;
+}
+
+#house-image{
+  position: absolute;
+  top: 41px;
+  left: -100px;
 }
