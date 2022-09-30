@@ -120,6 +120,7 @@ export class CreateRentalFormComponent implements OnInit {
       image: ['', Validators.required]
     })
   
+    // fill countries select list
     this.http.get(
       `${this.crossDomain}/http://battuta.medunes.net/api/country/all/?key=5101bc4ce4082219254f2b3871402060`
     ).subscribe((res) => {
@@ -128,6 +129,7 @@ export class CreateRentalFormComponent implements OnInit {
   
   }
 
+  //attach image
   processFile(imageInput: any){
     this.selectedFile = imageInput.files[0];
   }

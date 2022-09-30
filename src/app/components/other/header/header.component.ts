@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
     private userService: UserService
   ) { }
 
-  role!: string;
+  role: string = 'tenant';
   anfitrion!: boolean;
-  inquilino!: boolean;
+  inquilino: boolean = true;
 
   userId: any;
   userImg: any;

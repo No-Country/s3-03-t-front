@@ -15,12 +15,9 @@ main {
             font-size: 40px;
             }
             a {
+                @include button-primary;
                 padding: 1rem 3rem;
-                border-radius: 40px;
-                color: var(--text-primary-color);
-                background-color: var(--button-secondary-color);
                 font-size: 30px;
-                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
             }
         }
 

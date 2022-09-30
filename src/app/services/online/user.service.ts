@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { RoommateInterface } from 'src/app/interfaces/roommate-interface';
 import { HttpHeadersService } from '../other/http-headers.service';
 
 @Injectable({
@@ -19,7 +20,7 @@ export class UserService {
   getAllUsers() {
     this.headers = this.httpHeadersService.getHeaders();
 
-    return this.http.get(
+    return this.http.get<RoommateInterface[]>(
       'https://yourroom.herokuapp.com/user/all',
       {
         headers: this.headers

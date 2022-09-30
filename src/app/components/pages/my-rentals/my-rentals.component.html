@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main>
-    <h1>
-        Mis propiedades en alquiler
+    <h1 *ngIf="rentals">
+        Mis propiedades en alquiler ({{rentals.length}})
     </h1>
     <section *ngIf="rentals; else emptyRentalsBlock" class="rental-catalog-container">
         

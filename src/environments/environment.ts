@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://yourroom.herokuapp.com',
+  battutaBaseUrl: 'http://battuta.medunes.net/api',
+  battutaKey: '5101bc4ce4082219254f2b3871402060',
 };
 
 /*

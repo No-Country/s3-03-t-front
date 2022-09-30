@@ -2,7 +2,7 @@
 
   <section class="header-session-left">
     <article class="header-session-logo">
-      <img src="../../../../assets/header/Share.png" alt="logo" [routerLink]="['']">
+      <img src="../../../../assets/header/Share.png" alt="logo">
     </article>
     <article class="header-session-buttons" *ngIf="inquilino">
         <div class="header-session-button-action" [routerLink]="['','search-rental']" routerLinkActive="activeRoute">
@@ -42,7 +42,7 @@
       <ng-template #elseBlock>
         <div class="header-session-button-action" [routerLink]="['','account']" routerLinkActive="activeRoute" *ngIf="userImg">
           <div class="header-session-button-profile-custom-container">
-            <img src="{{userImg}}" alt="profile-pic-empty" class="header-session-button-profile-custom">
+            <img src="{{userImg}}" alt="profile-pic" class="header-session-button-profile-custom">
           </div>
         </div>
       </ng-template>
