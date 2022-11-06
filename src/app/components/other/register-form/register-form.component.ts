@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/services/online/register.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register-form',
@@ -39,7 +40,11 @@ export class RegisterFormComponent implements OnInit {
       .subscribe((res) => {
         this.registerService.saveData(res);
         this._router.navigate(['/login']);
-      }, (err) => alert(err.message));
+      }, (err) => {
+        if (err.status === 404) {
+          Swal.fire('Error', 'Ocurrió un error inesperado', 'error');
+        }
+      });
     }
   }
 

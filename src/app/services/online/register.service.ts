@@ -20,7 +20,7 @@ export class RegisterService {
   register(form: FormGroup):Observable<any>{
     return this.http.post(
         //base url + '/auth/register'
-        'https://yourroom.herokuapp.com/auth/register',
+        'https://ancient-fjord-73536.herokuapp.com/' + 'https://yourroom.herokuapp.com/auth/register',
 
         //pendiente aplicar interface ya creada
         {

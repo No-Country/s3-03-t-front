@@ -36,7 +36,7 @@ export class LoginFormComponent implements OnInit {
   send(): void {
     if (this.form.invalid) {
       Swal.fire('Error', 'Complete todos los campos', 'error');
-    }else{
+    } else {
       this.loginService.signin(this.form.value)
       .subscribe((res) => {
         this.loginService.user = res;
@@ -47,8 +47,8 @@ export class LoginFormComponent implements OnInit {
       }, (err) => {
         if (err.status === 401){
           Swal.fire('Error', 'Usuario y/o contraseña incorrectos', 'error');
-        } else {
-          alert(err.message);
+        } else if (err.status === 404) {
+          Swal.fire('Error', 'Ocurrió un error inesperado', 'error');
         }
       });
     }
