@@ -3,6 +3,83 @@
 <p>Compañero ideal es una app para alquilar piezas para estudiantes que vienen del exterior a estudiar.<br>
 En la app se registrar Usuarios de tipo propietario e inquilino.</p>
 
+<div align="center">
+
+## 📌 Landing Page
+
+<img src="https://i.ibb.co/2jMR2fT/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Registro
+
+<img src="https://i.ibb.co/jvwxDfK/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Inicio de sesión
+
+<img src="https://i.ibb.co/ZTbkmqq/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Selección de rol
+
+<img src="https://i.ibb.co/k8QmQyP/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Configuración de Cuenta - Inquilino
+
+<img src="https://i.ibb.co/Bj6LyRx/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Configuración de Cuenta - Anfitrión
+
+<img src="https://i.ibb.co/nn2mm8j/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Busqueda de habitaciones
+
+<img src="https://i.ibb.co/5TptmQN/Sin-t-tulo.png" width="800" alt=''>
+
+## 📌 Listado de propiedades
+
+<img src="https://i.ibb.co/cDNq5rZ/Sin-t-tulo.png" width="800" alt=''>
+
+</div>
+
+<div align="center">
+
+## 📌 Listado de "Compañeros de cuarto"
+
+<img src="https://i.ibb.co/NVzknsf/Sin-t-tulo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
+## 📌 Detalle propiedad
+
+<img src="https://i.ibb.co/CM5147s/Sin-t-tulo.png" width="800" alt=''>
+
+</div>
+
+<div align="center">
+
+## 📌 Cargar propiedad
+
+<img src="https://i.ibb.co/MDbNXnQ/Sin-t-tulo.png" width="800" alt=''>
+
+</div>
+
 <h3>Back End</h3>
 <ul>
     <li>Java - 11</li>
